@@ -1,0 +1,8 @@
+spell.15
+
+enchant:  
+This spell places an enchantment upon a weapon or armor, thereby
+increasing some of its attributes.  The level of enchantment depends 
+upon the level of the caster.  Enchant can only be cast by a mage.
+
+MP cost: 25 		Syntax: cast enchant <item>

@@ -1,0 +1,16 @@
+	TRACK
+
+Track is a special ability that rangers have.  If a ranger 
+is successful, he or she will discover the tracks of the last 
+person to leave the room.  In other words, if a person had 
+been in the room a day before and left the room by heading 
+north, the ranger would be able to discover this fact with 
+the track command.  This is extremely useful in getting out 
+of maze-like dungeons or forests.  
+
+NOTE:  There is also a track SPELL which can be cast.  
+However, only rangers, druids and assassins can use it and
+its purpose is to find and track a particular player.  When 
+cast, the seeker will be transported to the target's room. 
+
+MP cost: 12      Syntax: cast track <target>

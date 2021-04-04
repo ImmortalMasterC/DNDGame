@@ -1,0 +1,9 @@
+spell.43
+
+resist-cold:   
+This spell protects its target from the damage of biting cold.
+A player is protected from the damages of a frost breathing
+monster, and is also protected from any freeze spells which 
+might be cast on him/her.
+
+MP cost: 12 		Syntax: cast resist-cold <target>

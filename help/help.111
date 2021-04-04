@@ -1,0 +1,27 @@
+help.111
+
+	*USERS [f]
+
+	This function lists all the users currently online.  There is additional
+    information as well.  Different information is displayed if the f flag
+    is used. 
+
+example:
+:*users
+
+Player    Lev - Class     Room                       Last Command       Idle
+------------------------------------------------------------------------------
+Fin       09  Assassin    00042  Leviathan Wa          down            00:00
+Jojo      07  Mage        00050  Limbo                 info            01:40
+Ulster    12  Druid       01432  Shadow Magic Temple   look sword      00:22
+
+example:
+:*users f
+
+
+
+====================================
+Fin		66.152.89.122
+Jojo            111.132.6.12
+Ulster          215.232.321.5
+

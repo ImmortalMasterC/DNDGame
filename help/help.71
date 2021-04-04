@@ -1,0 +1,16 @@
+	TEACH <character> <spell>
+
+This command can be used only by mages, clerics and druids to 
+teach others particular spells.  Mages may only teach the four 
+basic offensive spells, one from each realm, while clerics and 
+druids may teach spells related to their calling.  The teacher 
+earns experience points for such a kindness.
+
+MAGE                     CLERIC              DRUID 
+burn - fire              vigor               vigor
+hurt - wind              bless               cure-poison
+blister - water          light               cure-disease
+rumble - earth           protection
+                         know-aura
+:teach gonzo vigor
+Spell "vigor" taught to Gonzo.

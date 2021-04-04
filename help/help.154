@@ -1,0 +1,9 @@
+help.154
+
+	*quests <player>
+
+This command allows a DM or caretaker to list the quests that
+have been fulfilled by any player who is logged in.  
+
+example:
+:*que casper

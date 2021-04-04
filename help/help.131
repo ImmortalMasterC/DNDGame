@@ -1,0 +1,7 @@
+help.131
+
+	*NAME [room name]
+
+	This function sets the name of the parent room.
+The new name will not be permanent though, until the *save command 
+is given.

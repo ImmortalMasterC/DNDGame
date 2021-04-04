@@ -1,0 +1,13 @@
+A monster can be made into a gatekeeper or doorman
+by setting flag 76.  The gatekeeper will open a 
+door or gate if paid his fee.
+
+When you create a gatekeeper, the amount of the fee is 
+the same as the amount you set as the monster's gold.
+
+The "fixed amount of gold", flag 26, should be set, as 
+well flag 67, "Cannot be bribed".
+
+The exit should have flags 3,4,5,6,7 and 63 set.
+
+

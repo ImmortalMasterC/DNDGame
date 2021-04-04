@@ -1,0 +1,38 @@
+	BALANCE  DEPOSIT  TRANSFER  WITHDRAW  BORROW
+
+These commands can only be used in a bank facility.  The Darbonne
+City Bank will accept deposits from players so long as the amount
+of the deposit is equal to or greater than $100 in gold.  There is 
+no restriction on the amount of a withdrawal.  A player may transfer
+funds to another player, or check his/her balance, at any time.
+Specified amounts must be preceded by a dollar sign.  There is a 2%
+fee charged for deposits and transfers, plus transfers incur an
+additional fixed charge of $50.00.  There is a fixed fee of $10.00
+for determining your balance.  There is no fee for withdrawals.
+A player may also borrow funds, but only for training purposes only.
+The fee is ten percent.  
+
+
+: balance
+There is a $10 bank fee for checking your balance.
+Your bank balance is $4150 in gold.
+
+: deposit $5000
+You deposit 5000 gold pieces.  
+You pay 100 gold pieces in taxes.
+Your balance is $9050 in gold.
+
+: withdraw $2050
+You withdraw 2050 gold pieces. 
+Your balance is $7000 in gold.
+
+: transfer $1000 gonzo
+Transfer fee of 50 gold pieces deducted.
+950 gold pieces transferred to Gonzo.
+Your new balance is $6000 in gold.
+
+: borrow $50000
+The bank loans you $55000 in gold.
+The fee will be $5000 in gold.
+Your new account has a balance of $50000 in gold.
+No more bank activity will be allowed until this loan is repaid.

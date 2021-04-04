@@ -1,0 +1,26 @@
+?R:1 =1:8
+*
+?R:2 =2:9
+*
+?R:3 =3:10
+*
+?R:4 =4:11
+*
+?R:5 =5:12
+*
+?R:6 =6:13
+*
+@1
+*
+>S @2
+Dwarves are small punks!
+>S @3
+Elves are wimps!
+>S @4
+Crossbreed elf scum!
+>S @5
+Hobbit make good slaves.
+>S @6
+Humans have no brains.
+>S @1
+Orcs Rule!

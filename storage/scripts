@@ -1,0 +1,287 @@
+
+/***********************************************************************
+ * UPDATE_ACTION                                                       *
+ * This function handles conditional reactions of logic monsters.      *
+ ***********************************************************************
+ *                                                                     *
+ * Note: The origin of this function was part of the public domain     *
+ *       release of Mordor 4.61. At least in that version the only     *
+ *       options really working were SAY and ECHO. The script language *
+ *       interpreter was written by Charles Marchant for Mordor 3.0.   *
+ *                                                                     *
+ * TODO: There should be a possibility to work on scripts online...    *
+ *                                                                     *
+ ***********************************************************************
+ *                                                                     *
+ * Copyright (C) 1998 by Egbert Hinzen <ehinzen@netcologne.de>         *
+ *                                                                     *
+ ***********************************************************************/
+
+void update_action(long t)
+{
+    creature    *crt_ptr,*vic_ptr;
+    object      *obj_ptr;
+    room        *rom_ptr;
+    ctag        *cp,*vcp;
+    ttag        *act,*tact;
+    int         i,on_cmd; 
+    int         xdir;
+    char        *xits[] =  { "n","ne","e","se","s","sw","w","nw","u","d" };
+    cmd         cmnd;
+       
+    last_action_update = t;
+    
+    for(cp = first_active;cp;cp = cp->next_tag)
+	{
+		crt_ptr = cp->crt;
+		if(crt_ptr)
+		{
+			rom_ptr = crt_ptr->parent_rom;
+			if(rom_ptr && F_ISSET(crt_ptr,MROBOT))
+			{
+				if(!cp->crt->first_tlk)
+					load_crt_actions(cp->crt);
+				else
+				{
+					act = cp->crt->first_tlk;
+					on_cmd = act->on_cmd;
+					on_cmd--;
+					i = 0;
+					if(on_cmd)
+						while(i<on_cmd)
+						{
+							act = act->next_tag;
+							i++;
+						}
+					on_cmd+=2; /* set for next command, can be altered later */
+					/* proccess commands based on a higharcy */
+					if(act->test_for)
+					{
+						switch(act->test_for)
+						{
+						case 'P': /* test for player */
+							vic_ptr = find_crt(crt_ptr, rom_ptr->first_ply, act->response, 1);
+							if(vic_ptr)
+							{
+								if(crt_ptr->first_tlk->target)
+									free(crt_ptr->first_tlk->target);
+								crt_ptr->first_tlk->target = (char *)
+								calloc(1,strlen(act->response)+1);
+								strcpy(crt_ptr->first_tlk->target,act->response);
+								act->success = 1;
+							}
+							else
+							{
+								if(crt_ptr->first_tlk->target)
+									free(crt_ptr->first_tlk->target);
+								crt_ptr->first_tlk->target = 0;
+								act->success = 0;
+							}
+							break;
+						case 'C': /* test for a player with class */
+						case 'R': /* test for a player with race */
+						case 'o': /* test for an object carried by a player */
+							for(vcp = rom_ptr->first_ply;vcp;vcp = vcp->next_tag)
+							{
+								if(act->test_for == 'C')
+									if(vcp->crt->class == act->arg1)
+									{
+										if(crt_ptr->first_tlk->target)
+											free(crt_ptr->first_tlk->target);
+										crt_ptr->first_tlk->target = (char *)
+											calloc(1,strlen(vcp->crt->name)+1);
+										strcpy(crt_ptr->first_tlk->target,vcp->crt->name);
+										act->success = 1;
+										break;
+									}
+								if(act->test_for == 'R')
+									if(vcp->crt->race == act->arg1)
+									{
+										if(crt_ptr->first_tlk->target)
+											free(crt_ptr->first_tlk->target);
+										crt_ptr->first_tlk->target = (char *)
+											calloc(1,strlen(vcp->crt->name)+1);
+										strcpy(crt_ptr->first_tlk->target,vcp->crt->name);
+										act->success = 1;
+										break;
+									}
+								if(act->test_for == 'o')
+								{
+									obj_ptr = find_obj(crt_ptr, vcp->crt->first_obj, act->response, 1);
+									if(obj_ptr)
+									{
+										if(crt_ptr->first_tlk->target)
+											free(crt_ptr->first_tlk->target);
+										crt_ptr->first_tlk->target = (char *)
+											calloc(1,strlen(act->response)+1);
+										strcpy(crt_ptr->first_tlk->target,vcp->crt->name);
+										act->success = 1;
+										break;
+									}
+								}
+							}	
+							if(!vcp)
+							{
+								if(crt_ptr->first_tlk->target)
+									free(crt_ptr->first_tlk->target);
+								crt_ptr->first_tlk->target = 0; 
+								act->success = 0;
+							}
+						break;
+						
+						case 'O': /* test for object in room */
+							obj_ptr = find_obj(crt_ptr, rom_ptr->first_obj, act->response, 1);
+						
+							if(obj_ptr)
+							{
+								if(crt_ptr->first_tlk->target)
+									free(crt_ptr->first_tlk->target);
+								crt_ptr->first_tlk->target = (char *)calloc(1,strlen(act->response)+1);
+								strcpy(crt_ptr->first_tlk->target,act->response);
+								act->success = 1;
+								/* loge(vic_ptr->name); */
+							}
+							else
+							{
+								if(crt_ptr->first_tlk->target)
+									free(crt_ptr->first_tlk->target);
+								crt_ptr->first_tlk->target = 0;
+								act->success = 0;
+							}
+							break;
+						case 'M': /* test for monster */
+							vic_ptr = find_crt(crt_ptr, rom_ptr->first_mon, act->response, 1);
+							if(vic_ptr)
+							{
+								if(crt_ptr->first_tlk->target)
+									free(crt_ptr->first_tlk->target);
+								crt_ptr->first_tlk->target = (char *) calloc(1,strlen(act->response)+1);
+								strcpy(crt_ptr->first_tlk->target,act->response);
+								act->success = 1;
+							}
+							else
+							{
+								if(crt_ptr->first_tlk->target)
+									free(crt_ptr->first_tlk->target);
+								crt_ptr->first_tlk->target = 0; 
+								act->success = 0;
+							}
+							break;
+						case 't': /* test for time */
+							i = (int)(Time%24L);
+							if (i == (int)(act->arg1)) act->success = 1;
+							else act->success = 0;
+							break;
+						case 'r': /* test fo room */
+							if (crt_ptr->rom_num == act->arg1) act->success = 1;
+							else act->success = 0;
+							break;
+						}
+		
+					}
+				    if(act->if_cmd)
+					{ 
+						/* test to see if command was successful */
+						for(tact = crt_ptr->first_tlk;tact;tact = tact->next_tag)
+						{
+							if(tact->type == act->if_cmd)
+								break;
+						}
+						if(tact)
+						{		
+							if(act->if_goto_cmd && tact->success)
+								on_cmd = act->if_goto_cmd;
+							if(act->not_goto_cmd && !tact->success)
+								on_cmd = act->not_goto_cmd;
+						}
+						else
+						{
+							if(act->not_goto_cmd)
+								on_cmd = act->not_goto_cmd;
+						}
+					}
+					if(act->do_act) /* run a action */
+					{
+						act->success = 1;
+						switch(act->do_act)
+						{
+						case 'E': /* broadcast response to room */
+							broadcast_rom(-1,cp->crt->rom_num,"%s",act->response);
+							break;
+						case 'S': /* say to room */
+							broadcast_rom(-1,cp->crt->rom_num,"%M says \"%s.\"", crt_ptr,act->response);
+							break;
+						case 'A': /* attack monster in target string */
+							if(crt_ptr->first_tlk->target && !crt_ptr->first_enm)
+							{
+								vic_ptr = find_crt(crt_ptr,rom_ptr->first_mon, 
+									crt_ptr->first_tlk->target,1); 
+								if(vic_ptr)
+								{
+									add_enm_crt(vic_ptr->name, crt_ptr);
+									if(crt_ptr->first_tlk->target)
+										free(crt_ptr->first_tlk->target);
+									crt_ptr->first_tlk->target = 0;
+								}
+							}
+							break;
+						case 'a': /* attack player target */
+							if(crt_ptr->first_tlk->target && !crt_ptr->first_enm)
+							{
+								add_enm_crt(crt_ptr->first_tlk->target, crt_ptr);
+								broadcast_rom(-1, crt_ptr->rom_num,
+									"%M attacks %s.", crt_ptr, crt_ptr->first_tlk->target);
+							}
+							break;
+						case 'c': /* cast a spell on target */
+							break;
+						case 'F': /* force target to do somthing */
+							break;
+					    	case '|': /* set a flag on target */
+							break;
+					    	case '&': /* remove a flag on target */
+					        	break;
+						case 'P': /* perform social */
+							break;
+					    	case 'O': /* open door */
+							break;
+					    	case 'C': /* close door */
+							break;
+						case 'D': /* delay action */
+							break;
+					    	case 'G': /* go into a keyword exit */
+							break;
+					    	case '0': /* go n */
+					    	case '1': /* go ne */
+						case '2': /* go e */
+						case '3': /* go se */
+					    	case '4': /* go s */
+						case '5': /* go sw */
+					    	case '6': /* go w */
+						case '7': /* go nw */
+					    	case '8': /* go up */
+					    	case '9': /* go down */
+							xdir = act->do_act - '0';
+							strcpy(cmnd.str[0],xits[xdir]);
+							move(crt_ptr,&cmnd);
+							break;
+						case '+': /* guard exit */
+							F_SET(crt_ptr,MPGUAR);
+							break;
+						case '-': /* don't guard exit */
+							F_CLR(crt_ptr,MPGUAR);
+							break;			
+					    }
+					}
+					if(act->goto_cmd) /* unconditional jump */
+					{
+						act->success = 1;
+						cp->crt->first_tlk->on_cmd = act->goto_cmd;
+					}
+					else
+						cp->crt->first_tlk->on_cmd = on_cmd;
+				}
+			}
+		}
+    }  
+}

@@ -1,0 +1,11 @@
+	DESCRIPTION [text|del]
+
+This command allows you to set your character's description as seen 
+by other players when they look at your character.  To delete the 
+description, use the 'del' form.
+
+:desc I am one mean dwarf!
+Description set.
+
+:desc del
+Description cleared.

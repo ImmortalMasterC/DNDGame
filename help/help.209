@@ -1,0 +1,13 @@
+	DISTRACT <monster> [#]
+
+Thieves may distract a monster that is guarding treasure on the 
+floor, and if successful, the monster will not even know he or 
+she has been distracted from their task.  Other players in the
+room will not become aware of the succesful distraction, thus 
+allowing the thief first chance at the treasure on the floor.
+
+However, if unsuccessful, the monsters will attack the thief that
+is making the effort and everyone in the room will know the thief
+botched the job.
+
+Related Commands:  steal, stealgold, peek

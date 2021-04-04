@@ -1,0 +1,9 @@
+	BASH <monster/player> [#]
+
+This command allows barbarians to bash an opponent, knocking the foe 
+to the floor for several seconds.  Bash does more damage than a regular
+attack and it also causes the opponent to be delayed for several seconds 
+while trying to get up off the floor.  This, in effect, gives the player 
+the initiative for further attacks.  The ability to bash can only be used
+at the beginning of combat.
+

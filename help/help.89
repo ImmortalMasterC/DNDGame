@@ -1,0 +1,25 @@
+	 RECHARGE  <object> [#]
+	TRANSMUTE  <object> [#]
+	     GLOW  <object> [#]
+
+These commands are only available to an alchemist.  
+No magic points are expended, and each command can only be done a 
+limited number of times a day.
+
+RECHARGE:  This skill allows an alchemist to transform gold into 
+magical power.  The power obtained from the gold must immediately be 
+put into a receptacle such as a wand.  The magic power obtained is 
+used to charge any wand that is held during the process.  
+
+TRANSMUTE:  Any object in the alchemist's possession except a magic 
+item may be transmuted into gold.  The amount of gold obtained in 
+this manner will never exceed the full value of the item, and will 
+often be less, depending on the experience of the alchemist.
+
+GLOW:  Certain weapons contain silver which can be made to glow with 
+an enchantment.  These weapons can open slow healing wounds on the 
+undead, making it difficult for them to recover from an attack.  Once 
+this weapon has touched an undead, it loses that glow.  A level seven 
+alchemist can restore that enchantment with the GLOW command.  There 
+is a cost to the alchemist of one third the value of the weapon.
+

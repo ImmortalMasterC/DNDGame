@@ -1,0 +1,22 @@
+help.152
+
+	*inventory <player> [add <number> | delete <name><#>]
+
+This command allows a DM or caretaker to list the inventory of any
+player who is logged in.  It will also list the contents of any bags
+or other containers carried by the player.  The DM can add an item or 
+delete an item from the player's inventory.  Additional information 
+is given concerning the maximum weight the player can carry.
+
+example:
+:*inve casper
+Casper has 3000 gold.  His inventory is:
+a spear, two capes.
+Three items carried, and the total weight is 5 pounds.
+Maximum weight that Casper can carry is 240 pounds.
+
+*inve casper add 5
+spear added to Casper's inventory.
+
+*inve casper del cape 2
+cape deleted from Casper's inventory.

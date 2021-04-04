@@ -1,0 +1,62 @@
+  #   Scroll      	Spell-Realm	Exp  Mg  Qst   Room	Monster
+------------------------------------------------------------------------------
+301.  gray		vigor		     01	  01	
+302.  black		hurt-2		     02	  02  
+303.  glowing		light		     03	  03
+304.  green		curepoison	     04	  04  
+305.  white		bless		     05	  05
+306.  blue		protection	     06	  06
+307.  charred		fireball-3	     07	  07  
+308.  purple		invisible	     08	  08
+309.  none		restore		     09	  09
+310.  violet		detect-invis	     10	  10
+311.  sparkling		detect-magic	     11	  11
+312.  shimmering white  teleport	     12	  12
+313.  black-striped	stun		     13	  13
+314.  electric-blue	lightning-2	     14	  14
+315.  blue-white	ice blade-4	     15	  15
+316.  golden		enchant		     16	  16
+317.  silver		word-of-recall	     17	  17
+318.  shimmering black	summon		     18	  18
+319.  blood-soaked	mend-wounds	500  19	  19   1235	none
+  #   Scroll      	Spell-Realm	Exp  Mg  Qst   Room	Monster
+------------------------------------------------------------------------------
+320.  light-green	heal		     20	  20
+321.  leaf-green	track		     21	  21
+322.  tattered		levitation	     22	  22
+323.  burnt-red		resist-fire	     23	  23
+324.  weightless	fly		     24	  24
+325.  sparkling red	resist-magic	     25	  25
+326.  azure		shockbolt-2	     26	  26
+327.  earthbrown	rumble-1	     27	  27
+328.  ash-white		burn-3		     28	  28
+329.  scarlet		blister-4	     29	  29
+330.  torn indigo	dustgust-2	     30	  30
+331.  turquoise		waterbolt-4	     31	  31
+332.  dirty brown	stone crush-1	     32	  32
+333.  dark brown	engulf-1	     33	  33
+334.  flaming red	burstflame-3	     34	  34
+335.  citron		steamblast-4	     35	  35	
+336.  sepia		shatterstone-1	     36	  36
+337.  cherry-red	immolate-3	     37	  37
+338.  anil-blue 	bloodboil-4	     38	  38
+  #   Scroll      	Spell-Realm	Exp  Mg  Qst   Room	Monster
+------------------------------------------------------------------------------
+339.  cobalt-blue 	thunderbolt-2	     39	  39
+340.  honey-brown	earthquake	     40   40
+341.  burnt-orange	flamefill	     41	  41
+342.  light-gray	know-alignment	     42	  42
+343.  goatskin		remove-curse	     43	  43
+344.  amber		breath-water	     44	  44 
+345.  lilac		breathe-water	     45	  45
+346.  silver-gray	earth-shield	     46	  46
+347.  onion skin	clairvoyance 	     47	  47
+348.  henna		drain-energy (exp)   48   48
+349.  mottled green	remove-disease	     49	  49
+350.  black and white	cure-blindness	     50	  50    5518	   56
+351.  lemon yellow	fear		     51	  51
+352.  iron gray		room-vigor	     52	  52
+353.  hazy blue		transport	     53	  53
+354.			cause blindness	     54	  54
+355.			cause silence	     55	  55
+356.			hypnosis	     56	  56

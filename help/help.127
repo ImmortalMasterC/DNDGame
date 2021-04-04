@@ -1,0 +1,17 @@
+help.127
+
+	*PARAMETER [r|d|s]
+
+	This function allows the DM to set various game parameters.  
+These parameters can be listed by using the 'd' flag.
+
+example:
+:*parameter d
+Random Update: 1
+Time to next shutdown: 5086
+Rainbow touching interval 4200
+Time to rainbow: 4184
+
+:parameter sail	  /* An anchronism from when the Widowmaker would sail.  */
+:
+One end of a rainbow touches Darbonne.

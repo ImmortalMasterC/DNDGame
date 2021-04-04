@@ -1,0 +1,7 @@
+
+UTILITIES --
+Message is a simple program that outputs a message when someone connects 
+to a port.  You can use it to put up a message on the game port when you 
+are down for whatever reason.
+utilities should be compiled and placed in /bin.
+Italk and muddle are both mud clients.

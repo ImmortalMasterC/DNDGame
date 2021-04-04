@@ -1,0 +1,20 @@
+help.155
+
+	*NEWS  [d|a]
+
+	This allows you to append or delete the Mordor newspaper. 
+The 'd' flag clears the newspaper, and the 'a' flag allows you to 
+append to the bottom of the newspaper.  A single period (.) on a 
+line by itself will terminate the appending of text.  (See the 
+related NEWS command.)
+
+example:
+
+:*news a
+-> NEWS FOR NEW PLAYERS
+-> Speak to the Flower Lady for directions to training sites.
+->.
+Message appended.
+
+:*news d
+Clearing newspaper

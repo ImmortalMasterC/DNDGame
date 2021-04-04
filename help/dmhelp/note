@@ -1,0 +1,17 @@
+Sometimes you want to make notes to yourself, right?  
+Well, just type *note and you get a note pad for just 
+that purpose.
+
+If you want to see your previous notes, type *note
+
+You can delete all of the previous notes with the command:
+	*note d
+
+You can append to your old notes with the command:
+	*note a <message>
+
+When you are entering notes, a single period (.) on a line
+terminates the notetaking.
+
+See help *note
+

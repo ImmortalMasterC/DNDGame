@@ -1,0 +1,62 @@
+AsciitoBintoAscii
+_________________
+
+By Steven Wallace
+
+  This is an old (by Mordor standards) and very useful utility.  This 
+allows you to convert your database from binary form into ascii.  This 
+will let you change the struct, then convert your old database to the
+new form of struct.
+It can also be used to port databases to other architectures.
+It should reside in ~/util/ascbin and will compile using the headers 
+contained in your source tree.  The binary was compiled under Linux 
+2.0.29.
+
+  It operates in 2 modes:
+
+Binary to Ascii:
+  Most of the datafiles in Mordor are binary format.  You can convert 
+them to ascii with --
+
+	ab b [r|p|c|o] ascfile binfile
+ 
+  This will convert the binary room, player, creature, or object file 
+to ascii.  The ascii file can then be turned back to binary with --
+
+	ab a ascfile
+
+HOWTO
+
+There is a program located in /util/ascbin called ab.  After it is
+compiled, it should be located in the mordor bin directory.
+Make backup files for everything that is to be converted.
+
+cd to /objmon 
+type "ab b p <ascfile> ../player/<playerfile>" for each player.
+
+type "ab b c <ascfile> <mfile>"  for each binary group such as 
+m00, m01 etc.
+You will get a final error message - but the asc is ok!
+
+Now change mstruct.h:
+	- I changed daily to 25,
+	- lasttime to 90,
+	- and added "long bank_bal;" after "rom_num".
+Note: any additions to the struct should go at the bottom of the struct.
+make clean; make
+
+Now you can convert the ascii files back to binary.
+type "ab a <ascfile>"
+ATTENTION: ab always creates m00!  So be sure to convert the highest
+ascii file first, and then rename m00 to the correct m-file.
+Continue doing so for all monster and player files.
+Don't use any extern files before you have recompiled them.
+--
+
+Not sure, but I think this is the case....  When you convert the files
+to binary, the ab program you use must be compiled with the same mstruct.h
+that was used to build the binary program.  Then, after you have modified
+the mstruct.h file, re-compile the ab program and use the new ab program
+to convert the ascii file back to binary.  This will create a new binary
+which uses the new, modified struct.
+

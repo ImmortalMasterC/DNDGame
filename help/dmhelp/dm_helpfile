@@ -1,0 +1,49 @@
+DM help files currently available:
+
+	online_ed_____ online editor
+	pflags ------- current player flags
+	oflags ------- current object flags
+	rflags ------- current room flags
+	mflags ------- current monster flags
+	xflags ------- current exits flags
+	sflags ------- current spell flags
+	xtraps ------- exit traps
+	otypes ------- object types
+	oset --------- *set commands for objects
+	pset --------- *set commands for players
+	mset --------- *set commands for monsters
+	rset --------- *set commands for rooms
+	xset --------- *set commands for exits
+	scrolls ------ scrolls
+	spells ------- player spells
+	wear --------- wear locations
+	titles ------- class titles
+	class -------- classes
+	race --------- races
+	daily -------- daily limits
+	char --------- character classes and races
+	realms ------- realms and proficiencies 
+	exp ---------- experience points table
+	star --------- DM *commands
+	quest -------- quest objects
+	custom ------- personalized items
+	pot ---------- potions
+	wands -------- wands
+	train -------- training locations
+	shops -------- list the shops locations
+	teach -------- list the teachable spells
+	guide -------- list the monster guide
+	plu ---------- irregular plural list
+	forb --------- forbidden name list
+	combo ________ how to make a combination lock
+	containers --- information about containers
+	bribe -------- information on bribes
+	mobile-button- mobile button howto
+	note --------- DM note pad
+	backup ------- Restore a player from backup
+	message_obj -- How to make a messaging object
+	gatekeeper --- Paid doorman or gatekeeper
+	house -------- List the room numbers for all player's houses
+	passwd_mob --- Create a passwd protected entry
+	open_exit ---- Create an exit which uses a "Push" object
+	namedmonsters  Named monsters

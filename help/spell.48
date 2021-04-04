@@ -1,0 +1,6 @@
+spell.48
+
+cure-disease:   
+This spell cures any disease afflicting the target player.
+
+MP Cost: 12 		Syntax: cast cure-disease <target>

@@ -1,0 +1,21 @@
+	GAZE <exit>
+	
+This talent can only be used by Rangers, Druids and Mages.
+It allows you to "see" into the next room without actually entering
+that room.  However, it does not work for all rooms.  In general, it
+will not work if the exit has more than a single word for its name,
+nor will it work for any but the first when two exits have the same name.
+ 
+If you are a Ranger or a Druid, and above level four, this is an
+ability that can be used at any time.  If you are a Mage, you do not 
+need to cast it, but it will cost you 10 MP anytime you use it.
+
+Example:
+
+: gaze north
+
+You are looking at the north exit.
+
+You would see the complete description of the room immediately north
+and any players in it.  But you would not see the exits from that room, 
+nor any monsters in it.

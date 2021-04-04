@@ -1,0 +1,20 @@
+	FIX <object1> [#] <object2> [#]
+
+Some objects are repair tools and can be used to fix other objects.
+The degree to which an object is repaired depends to some extent
+on the dexterity of the player, but it will never be repaired as
+well as a blacksmith can do the job.  You cannot fix containers,
+scrolls or other repair tools.  Also, because it takes a lot of 
+effort to use repair tools, you must have at least 20 HP.
+
+There is a high probability that you will shatter both the repair 
+tool and the item you want to fix if your luck is bad or if your 
+piety is low.
+
+HP cost: 20      Syntax: fix helmet with hammer
+
+NOTE:  There is an alternate method that may be used:
+
+HP cost: 20      Syntax: use hammer on helmet
+
+RELATED:  See the help file for repairing an object -- help repair

@@ -1,0 +1,92 @@
+	This Document Will Help You Use The On-line Room Editor.
+
+For tutorial purposes, let's assume you wish to create a new room while
+on-line in the game.  If you need to know what room numbers are already 
+used, you can use the star command for listing rooms.
+
+*list r
+
+Unfortunately, this isn't a very good way to do it, since the entire 
+list of rooms will scroll by and all you will see is the last screen.
+Better to do it a little at a time by specifying the range.  Suppose
+you want to see what rooms are available between room number 1100 and
+1300...  do this:
+
+*list r -r1600:1700
+
+
+Suppose you see there are a block of unused room starting at room 1200.
+Now add the new room and then teleport to it.
+
+*add r 1200
+*t 1200
+
+You are are in a blank room with no name or description.  
+There are no exits.  This command will create a name for the room. 
+
+*name Wiley's Bar and Grill
+
+You have to create a short description for it.  This is best if it fits 
+on a single line.  You could use either the *append or *prepend command,
+because nothing has yet been written, but the -s specifies the short 
+description and is the best way with a new room. 
+
+*app -s You are in Wiley Coyote's Bar and Grill, a run-down gin mill.
+
+
+Next, you write the long description for the room.  Since this is a line-
+editor, each line must start with the *app command.
+
+*app Years ago Wiley gave up trying to catch the roadrunner and
+*app retired to this little spot in the desert.  As you look
+*app around you see most of the furniture came from a used
+*app furniture business.  Under the table is a box marked with
+*app three large X's.  In smaller letters it says ACME DYNAMITE.
+
+Be sure to save the room to the database with the save command.
+
+*sav
+
+Suppose you want to do some editing of your text...
+to replace the word "spot" with the word "oasis", do this:
+
+*rep spot oasis
+
+If you want to delete the word ACME, do this: 
+
+*del ACME 	Note:  Be sure to include a space after the word.
+
+Or, if you want to delete a phrase, use the -P option:
+
+*del -P Under the table 
+
+Again, if you don't want a extra space in your text, be sure to 
+include a trailing space in the text you delete.
+
+When a word such as "the" occurs more than once in the text, and you 
+want to edit perhaps the third occurance of it, maybe changing it to
+the word "those," be sure to specify the number. 
+
+*rep  the 3 those
+
+And, if you would like to take out all of the text from a certain point 
+to the end of the entire description, you can use this command:
+
+*del -E <enough of the text to be specific.>
+
+You can delete the entire short description or the entire long description.
+
+*del -S
+*del -L
+
+There is no command to delete the name, but you can simply use the *name
+command again to change it.
+
+Be sure to use the *save command to save your changes.  If you decide you
+don't want to save the changes you have just made, and want the old text
+back, (and haven't done the *sav command yet.)  just type:  
+
+*reload
+
+
+	-Styx-

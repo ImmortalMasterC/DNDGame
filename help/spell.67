@@ -1,0 +1,10 @@
+spell.66
+
+dispel
+This is a dangerous spell.  Actually, it's an anti-spell.
+When cast, either on self or another person, all spells
+are removed. 
+
+MP cost: 20      Syntax: cast dispel <player>
+~
+

@@ -1,0 +1,9 @@
+spell.59
+
+reflect:
+This spell can only be used by chaotic players.  It causes the target 
+player to be surrounded by a mirror-like haze that reflects any offensive
+spell cast by other chaotic players.  The spell does not reflect a spell
+cast by a monster.
+
+MP cost: 25 		Syntax: cast reflect <target>

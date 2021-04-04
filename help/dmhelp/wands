@@ -1,0 +1,75 @@
+------------------------------------------------------------------------------
+250. hickory wand         01	Vigor
+289. incense              01	Vigor
+742. druid's cross        05	Protection
+265. goat's horn          05	Bless
+269. cleric's sceptre     05	Bless
+261. glass wand           08	Invisible
+251. clear crystals       08	Invisible
+699. telescope            08	Invisible
+727. wand of the elders   09	Restore
+252. violet crystals      10	Detect-invisible
+262. glass rod            10	Detect-invisible
+257. crystal shard        11	Detect-magic
+ 64. jade pendant         12	Teleport
+126. rum cask             12	Teleport
+279. votive candles       12	Teleport
+115. silver ring          13	Stun
+271. sachet of spices     13	Stun
+266. red jaspar pendant   13	Stun
+603. signet ring          13	Stun
+733. lense of hypnosis    13	Stun
+931. pipe weed            13	Stun
+267. dreamstone amulet    16	Enchant
+253. knotty wand          17	Word of Recall
+753. wand of invoking     18	Summon
+268. leaf-shaped emerald  18	Summon
+132. silver wand          19	Mend-wounds
+713. sandworm's eye       20	Heal
+512. feather roll         22	Levitate
+513. scorched wooden staf 23	Resist-fire
+763. dragon eggshell      23	Resist-fire
+602. feather              24	Fly
+820. leather sandals      24	Fly
+260. unicorn horn         42	Know-aura
+631. human skull          42	Know-aura
+604. unicorn horn         43	Remove-curse
+514. amber stave          44	Resist-cold
+256. blue crystal         46	Stone-shield
+795. Odin's Right Eye     47	Mind-meld
+111. lemonwood wand       51	Fear
+518. lemonwood stave      51	Fear
+527. rosewood wand        52	Room-vigor
+524. ring of silver       54	Blind
+255. iron cross           57	Fortune
+398. tarot deck           57	Fortune
+756. wand of strength     58	Super-strength
+484. willow rod           59	Super-strength
+761. mirror of reflection 60	Reflect
+283. ice wand             62	Freeze
+838. spider net           65	Entangle		
+294. charcoal rod         68	dispel	
+934. acid-etched          69    resist-acid
+
+--------------------REALMS---------------------------
+273. ebony rod            02	Hurt           Wind
+281. pleated fan          02	Hurt           Wind
+282. goose feather        02	Hurt           Wind
+287. black staff          02	Hurt           Wind
+935. charred stave        07	Fireball       Fire
+511. red wand             07	Fireball       Fire
+258. ash stave            14	Ligntning      Wind
+544. black wand           26	Shockbolt      Wind
+580. ember                28	Burn           Fire
+286. blister baton        29	Blister        Water
+274. black rod            30	Dustgust       Wind
+284. water wand           31	Waterbolt      Water
+259. stone wand           32	Crush          Earth
+711. Sculpture of the Gre 33	Shatterstone   Earth
+285. steam stave          35	Steamblast     Water
+822. blue wand            35	Steamblast     Water
+519. ent staff            36	Engulf         Earth
+288. dark red stave       37	Immolate       Fire
+759. wand of thunder      39	Thunderbolt    Wind
+690. wand of soul crushin 40	Earthquake     Earth
+643. flaming catapult     41	Flame-fill     Fire

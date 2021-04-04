@@ -1,0 +1,10 @@
+	EMOTE <text>
+
+Emote allows you to customize the actions of your player.  It is 
+similar to the normal social commands (i.e. smile, laugh, etc) 
+except that the text can be anything you desire.  Your name will 
+always be prepended to the text string.
+
+:emote is very angry.
+Ok.
+Gonzo is very angry.

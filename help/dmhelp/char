@@ -1,0 +1,17 @@
+CLASS	CHARACTER    TRAINING BITS         RACE	  CHARACTER	SIZE
+  1	Assassin	  7   	     	    1	  Dwarf		Small
+  2	Barbarian	  6		    2	  Elf		Medium
+  3	Cleric		  7-6		    3	  Half Elf	Medium
+  4	Fighter		  5		    4	  Hobbit	Small
+  5	Mage		  7-5		    5	  Human		Medium
+  6	Paladin		  6-5		    6	  Orc		Medium
+  7	Ranger	 	  7-6-5		    7	  Half Giant	Large
+  8	Thief		  4		    8	  Gnome		Small
+  9	Bard		  7-4		    9	  Satyr		Large	
+ 10	Monk		  6-4		   10	  Half Orc	Medium
+ 11	Druid		  7-6-4		   11	  Ogre		Large
+ 12	Alchemist	  5-4		   12	  Dark Elf	Medium
+ 13	Caretaker			   13	  Centaur	Large
+ 14	Dungeonmaster
+
+

@@ -1,0 +1,14 @@
+spell.61
+
+freeze:
+This spell allows the caster to freeze another player or creature
+such that they cannot move.  If a resist-cold spell is cast on a
+player who has been frozen, then the resist-cold spell acts as a 
+thaw spell, and releases the player from frozen immobility.  
+(Note:  Any of the fire realm offensive spells will also dissipate
+the freeze spell, but are damaging.)
+
+Monsters that breath frost can occasionally freeze a player if the 
+player is not prepared and is not under a resist-cold spell.
+
+MP cost: 30		Syntax: cast freeze <target>

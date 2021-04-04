@@ -1,0 +1,8 @@
+spell.21
+
+levitate:   This spell helps its target avoid traps.  
+A player under this spell can also climb easily.
+The spell can be canceled with the 'land' command
+at no MP cost.
+
+MP cost: 10 		Syntax: cast levitate <target>

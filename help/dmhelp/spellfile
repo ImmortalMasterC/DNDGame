@@ -1,0 +1,27 @@
+Offensive Spells                    General Spells
+------------------------------      ---------------------------------
+Earth Realm     Wind Realm          absolve                 know-aura
+-----------     -----------         bless                    levitate 
+rumble          hurt                blind                       light
+crush           dustgust            breath-water          mend-wounds
+engulf          shockbolt           conjure                 mind-meld
+shatterstone    lightning           cure-blindness         protection 
+earthquake      thunderbolt         cure-disease              reflect
+                                    cure-poison          remove-curse
+Fire Realm      Water Realm         detect-invis       remove-silence 
+-----------     -----------         detect-magic          resist-cold
+burn            blister             dispel                resist-fire  
+fireball        waterbolt           drain-experience     resist-magic 
+burstflame      steamblast          earth-shield              restore   
+immolate        bloodboil           enchant                room-vigor    
+flamefill       iceblade            entangle                   shrink
+                                    evil-eye                  silence   
+                                    fear                       summon
+                                    fly                          stun
+                                    fortune            super-strength   
+                                    freeze                   teleport   
+                                    heal                        track
+                                    hex                     transport    
+                                    invisibility                vigor 
+                                    knock              word-of-recall       
+Type "help <spellname>" to get help on any one of these spells.

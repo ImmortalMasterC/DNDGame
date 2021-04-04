@@ -1,0 +1,9 @@
+spell.12
+
+stun:
+This spell momentarily stuns a player or monster, rendering them
+unable to attack for a short time.  The length of time depends on
+the caster's intelligence.  The duration is also increased if a mage
+does the casting.
+
+MP cost: 10		Syntax: cast stun <target>

@@ -1,0 +1,20 @@
+spell.63
+
+Conjure:
+This is a talent for chaotic mages, and does not need to be learned.
+Casting this spell brings forth a protective wraith which will protect
+the mage calling it from chaotic players.  A protector can only be
+summoned three times each day.  Depending on the mage's level, either
+a level 10 shade will be summoned, or a level 15 specter, or a level
+20 phantom.  The protective wraith is immediately aggressive toward
+the specified target, providing the target is also chaotic.  If no
+target is specified, then the wraith is aggressive to everyone, even
+the mage who summoned it.
+
+However, the wraith is rather benign in that no experience points are
+lost when it kills a player and no experience points are gained for
+killing it.  The killed player will drop a wielded weapon and find
+himself in Limbo.  (This might change in the future.)
+
+MP cost: 20		Syntax: cast conjure <target>
+

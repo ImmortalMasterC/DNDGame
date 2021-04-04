@@ -1,0 +1,18 @@
+alith
+You speak of our master so lightly.  Perhaps you have never experienced the power of the Holy Goat.  It was he who made me the Keeper of the Master Scroll. 
+triage
+There are three immortals, but Alith binds them together.  An old elf, Trinnadar, is the wisest.  Emstillion the dwarf has the heart and courage of a lion, and Elisha, the beautiful human, the sensitivity of a lover's caress.
+scroll
+The Master Scroll was torn asunder long ago, and now exists only as small fragments.  I and my assistants have been attempting to piece it together again.  Do you by chance have a fragment of the parchment?
+master
+It no longer exists.  Now only small fragments can be found, and then only by lucky adventurers.  My assistants help me in my endeavors to reassemble it.
+fragment ACTION bow
+If you have a fragment, I will have my assistant reward you handsomely.  I will trade you a key to one of my research rooms if you have a fragment.  Speak to my one of my assistants you find there.
+fragments ACTION bow
+If you have a fragment, I will have my assistant reward you handsomely.  I will trade you a key to one of my research rooms if you have a fragment.  Speak to my one of my assistants you find there.
+light CAST light
+The research rooms are kept quite dim to avoid having the light damage the scroll fragments.
+book GIVE 1 
+This book will be of most value to you.  Study it carefully, and you will be the wiser.
+word CAST word-of-recall
+Now begone!

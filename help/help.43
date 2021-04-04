@@ -1,0 +1,15 @@
+	SELL <object> [#]
+
+You may only sell things you have in your inventory while in a pawn 
+shoppe.  There are several pawn shoppes in the game, but be aware 
+that they are usually hidden.  Look carefully at room descriptions 
+to find clues on how to get there.  And remember to use the SEARCH 
+command!
+Once you find a pawn shoppe, you may sell any item you have that is 
+not broken or too cheap.  The shoppekeeper will not give you more 
+than 10000 gold pieces for any one item, so if it is actually worth 
+more, then you'll just have to settle for lessi or sell it to the 
+highest bidder.  To find out how much money the shoppekeeper will 
+give you an item before you actually sell it, use the command:
+VALUE <object> [#] 
+

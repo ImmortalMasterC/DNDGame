@@ -1,0 +1,34 @@
+train
+Ah, something told me that was what you had come here for.  If you can answer my riddle, I will bestow upon you a key to the training facility.  The door can be found along the outside of the building.
+riddle
+What level do you seek?
+thirteen
+Let's start with an easy one.  Where do you go when you die?
+limbo GIVE 212
+Correct!  Here is the key for the small brass door.
+fourteen
+Let's see if you can solve this one.  What is the name of the park beginning rangers go to level?
+puzzle GIVE 213
+You're sharp.  This key unlocks the crystal door.
+fifteen
+This one is a bit harder.  Who is the town leader of Greenwood?
+elder GIVE 241
+You must travel a lot.  Use this to unlock the cross door.
+sixteen
+Let me think.  Ah, yes.  Minnie has a bodyguard in her shoppe.  What race is it?
+gnome GIVE 208
+You must frequent her shoppe.  Take this.  It will open the copper door.
+seventeen
+This will stump you.  From what location does all the rum on Mordor originate from?
+uland GIVE 209
+You've had quite a bit of their rum now, have you?  Well, let me give you the key for the iron door.
+eighteen
+This riddle will have you thinking for weeks.  To change from lawful to chaotic, what item of Zeth must you grab hold of?
+horns GIVE 228
+My my.  You are a knowledgeable one.  This key will unlock the door behind me.
+nineteen
+You have reached the limits of what I can teach you.  From here, the path splits for both the followers of Alith and Zeth.
+alith
+Followers of Alith must seek out the Myrredene Temple in Lindon.
+zeth
+If you worship Zeth, you must seek out his temple.  There are rumors that he has had one built in Cardiff Park in Lindon.

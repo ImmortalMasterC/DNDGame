@@ -1,0 +1,20 @@
+	DISCARD <object> [#]
+	
+This command is used to discard an object from your inventory.
+It is different from the DROP command in that the item does not
+fall to the floor, but simply disappears completely.  The purpose 
+of this command is to get rid of broken items that clutter the 
+floor and slow the game.  You cannot discard a container unless
+it is empty.
+
+Remember though, any broken item is worth $5 in gold when you
+drop it in a recycling room such as the rubbish pile in the park.
+
+Suppose you have two black daggers in your inventory, and the 
+second one is broken.  Perhaps it has been repaired and lost its
+nice glow, so you don't want to repair it again.
+
+Example:
+
+: discard dagger 2
+You discard a black dagger which disappears in a whisp of smoke.

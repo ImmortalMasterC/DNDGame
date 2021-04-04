@@ -1,0 +1,6 @@
+spell.49
+
+cure-blindness:   
+This spell cures blindness.  It cannot be cast on oneself.
+
+MP Cost: 12 		Syntax: cast cure-blindess <target>

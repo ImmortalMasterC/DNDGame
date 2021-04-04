@@ -1,0 +1,8 @@
+help.132
+
+	*APPEND [-sn] [text]
+
+	This function will append [text] to the parent room description.  
+If -s is set then it will append to the short description.  If -n is 
+set, then it will append without a new line.  
+NOTE:  This function does not reformat the text.

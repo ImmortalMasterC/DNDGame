@@ -1,0 +1,11 @@
+help.168
+
+	*bank <player>
+	*balance <player>
+
+	This command will tell you how much money a player has in the bank.
+
+example:
+
+:*bal finadar
+Finadar is level 12 and has a bank balance of $12823

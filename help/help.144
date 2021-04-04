@@ -1,0 +1,10 @@
+help.144
+
+	*ENEMY <creature>
+
+	Outputs the current enemy list for a given creature.
+
+example:
+:*enemy nobleman
+Enemy list for nobleman:
+None.

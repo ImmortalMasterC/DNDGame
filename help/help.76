@@ -1,0 +1,12 @@
+	TRADE <item> <monster>
+
+With this command you can TRADE items from your inventory to a creature.  
+Do NOT make the mistake of GIVING something to the creature, else he 
+will take it and give you nothing in return.  Also, there are only a
+limited number of items which the creature is willing to trade for.  
+He will generally tell you what he is willing to trade if you talk to
+him.  (Which is a good idea, anyway.)
+
+:trade sword Nathalin
+Nathalin the Trader says, "I don't want that!"
+

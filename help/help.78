@@ -1,0 +1,16 @@
+	PASSWORD
+
+With this command you can change your password. 
+For the example below, assume your current password
+is Money$ and you want to change it to NoMoney!
+
+Example:
+: passwd
+
+Current password: Money$
+
+New password: NoMoney!
+
+Re-enter password: NoMoney!
+
+Password changed.

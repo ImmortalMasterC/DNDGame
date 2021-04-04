@@ -1,0 +1,12 @@
+	STEAL <object> [from] <player/monster> [#]
+
+Thieves may steal objects from monsters or other players.  If they 
+are successful, the victim will not even know he or she was stolen 
+from.  However, if unsuccessful, the victim is warned.  Monsters 
+usually get quite angry when someone tries to steal from them.
+
+CAUTION:  Just because you CAN steal from other players, don't abuse 
+          it.  Its easy to become a real jerk and make enemies you 
+          don't need.
+
+Related Commands:  Stealgold, peek, distract

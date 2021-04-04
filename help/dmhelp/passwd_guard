@@ -1,0 +1,26 @@
+A monster can be created that will passivly guard
+an exit until a secret password is given.
+
+You must be sure to set Special = 1
+and also set these monster flags...
+
+	 1      Permanent monster
+	22      Detect invisibility
+	24      Monster can talk interactively
+	25      Monster cannot be harmed
+	39      Passive exit guard
+	67      Cannot be bribed
+	70      Quietly accepts a password
+
+You must also create a talk file where the keyword
+is the password needed to cause the creature to
+allow entry.  Here's an example
+
+	<password>
+	Thank you, I bow to my master.  You may enter.
+
+
+Also you must set the exit flag that is to be
+guarded.
+
+	19      Passive guarded exit

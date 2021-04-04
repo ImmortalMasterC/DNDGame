@@ -1,0 +1,8 @@
+help.151
+
+	*advance [player name] [level]
+
+	This will advance the named player to the given level,
+with all of the correct changes in player's statistics such as
+strength, dexterity, etc.  Player level can be changed in either
+direction, up or down.  Player's experience points are ignored.

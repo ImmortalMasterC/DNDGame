@@ -1,0 +1,16 @@
+help.157
+
+	*OBJSAVE <object> <index number>
+
+	You can save an object to the database with this command. 
+Be sure to list the objects to find the last index number, else you may
+overwrite an existing object.
+
+	*SAVE c <name> <creature>
+
+	This will allow you to save a creature to the database.  See the
+warning above.
+
+Caretakers do not have the ability to use these two commands, but they
+can make an object or creature and then give it to the DM so that it
+may be saved. 

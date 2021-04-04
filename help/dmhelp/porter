@@ -1,0 +1,44 @@
+Create a Porter
+
+A porter is a special monster in the game which will
+carry a player's baggage if paid an appropiate amount
+of gold.
+
+To create a porter in the editor, you must set SPECIAL
+equal to 2, and you must set flag number 68, which is
+MPORTR, and flag number 8, MGUARD.  
+
+Do not set any value for magic points.
+
+====================================================
+
+A player must do the following to make use of a porter:
+
+pay <$amount> porter
+	The fee is $5 for each place the porter will follow.  
+	The maximum fee is $2500 for 500 places. 
+	(The porter will accept more but will not go further
+	without being paid additional money again.)
+	After the porter has followed a number of places, 
+	the player can pay more as often as needed.
+
+
+whisper follow porter
+	The porter will not follow until told to do so.
+
+whisper wait porter
+	The porter will stop following and wait.
+
+whisper <player's password> porter
+	The porter will drop all items carried and will
+	guard it from being taken by other players.  The
+	player who hired the porter must use the "get all"
+	command to retrieve his items, else the porter 
+	will not let him get anything but one item.
+
+
+
+
+
+
+

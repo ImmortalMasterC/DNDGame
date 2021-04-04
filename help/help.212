@@ -1,0 +1,15 @@
+	SNATCH/GRAB <item> <player>
+
+Thieves can snatch (grab) an item that is either wielded or held by 
+another player, providing both the thief and his victim are chaotic. 
+
+Success will depend on a variety of factors such as the relative
+dexterity and levels of the two.  If the thief's dexterity and/or
+level is higher than the victim, then the chance of success is higher.
+
+There is a loss of a modest amount of experience points if the thief
+fails to succesfully snatch an item from the other player.  The loss
+is equal to four times the thief's level.
+
+Unlike the steal command, the victim knows immediately when the thief
+snatches an object.

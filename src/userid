@@ -1,0 +1,106 @@
+command1.c:146:				str2, Ply[fd].ply->name, Ply[fd].io->address);         
+command1.c:722:    	    Ply[fd].io->intrpt &= ~1; 
+command1.c:731:    	        Ply[fd].io->intrpt &= ~1; 
+command1.c:762:            	Ply[fd].io->intrpt &= ~1; 
+command1.c:872:		Ply[fd].io->userid, Ply[fd].io->address, str2); 
+command4.c:665:	Ply[fd].io->intrpt &= ~1;
+command4.c:666:	Ply[fd].io->fn = info_2;
+command4.c:667:	Ply[fd].io->fnparam = 1;
+command4.c:1182:            	Ply[fd].io->intrpt &= ~1; 
+command4.c:1190:            	Ply[fd].io->intrpt &= ~1; 
+command4.c:1213:            	Ply[fd].io->intrpt &= ~1; 
+command4.c:1264:   	        	Ply[fd].io->intrpt &= ~1; 
+dm1.c:302:			print(fd, "%02ld:%02ld\n", (t-Ply[i].io->ltime)/60L,
+dm1.c:303:                                (t-Ply[i].io->ltime)%60L);
+dm1.c:319:			sprintf(idstr, "%sr@%s", Ply[i].io->userid, Ply[i].io->address);
+dm1.c:320:			if(!strcmp(Ply[i].io->userid, "no_port") || 
+dm1.c:321:				!strcmp(Ply[i].io->userid, "unknown"))
+dm1.c:751:	if(!(Ply[cfd].io->fn == command && Ply[cfd].io->fnparam == 1)) {
+dm2.c:540:		print(fd, " %02ld:%02ld", (t-Ply[crt_ptr->fd].io->ltime)/60L,
+dm2.c:541:			(t-Ply[crt_ptr->fd].io->ltime)%60L);
+dm2.c:553:		print(fd, "%s@%s", Ply[crt_ptr->fd].io->userid,
+dm2.c:554:			Ply[crt_ptr->fd].io->address);
+dm3.c:1224:		strcpy(addr, Ply[crt_ptr->fd].io->address);
+dm6.c:55:	if(!(Ply[cfd].io->fn == command && Ply[cfd].io->fnparam == 1)) {
+io.c:208:	io->ltime = time(0);
+io.c:209:	io->intrpt = 1;
+io.c:211:	strcpy(io->address, inetname(addr.sin_addr));
+io.c:217:		execl(path, "auth", io->address, port1str, port2str, 0);
+io.c:220:	strcpy(io->userid, "- ");
+io.c:222:	io->lookup_pid = pid;
+io.c:279:	Ply[fd].io->intrpt |= 2;
+io.c:293:	Ply[fd].io->ltime = time(0);
+io.c:316:		if(!addr_equal(Lockout[i].address, Ply[fd].io->address))
+io.c:379:		Ply[fd].io->commands = -1;	/* Connection dropped */
+io.c:383:		ihead = Ply[fd].io->ihead;
+io.c:385:		itail = Ply[fd].io->itail;
+io.c:391:				if(buf[i] == '\n') Ply[fd].io->commands++;
+io.c:394:					if(Ply[fd].io->input[prev] == '%')
+io.c:403:				Ply[fd].io->input[ihead] = buf[i];
+io.c:408:					Ply[fd].io->input[ihead] = buf[i];
+io.c:415:		Ply[fd].io->ihead = ihead;
+io.c:416:		Ply[fd].io->itail = itail;
+io.c:417:		Ply[fd].io->ltime = time(0);
+io.c:419:			Ply[fd].io->intrpt |= 1;
+io.c:421:			Ply[fd].io->intrpt &= ~1;
+io.c:442:			otail = Ply[i].io->otail;
+io.c:443:			ohead = Ply[i].io->ohead;
+io.c:446:			if(Ply[i].io->commands == -1) {
+io.c:450:			if(Ply[i].io->intrpt & 1) {
+io.c:451:				n = write(i, &Ply[i].io->output[otail],
+io.c:454:					write(Spy[i],&Ply[i].io->output[otail],ohead>otail ?
+io.c:457:					n+= write(i, Ply[i].io->output, ohead);
+io.c:459:						write(Spy[i], Ply[i].io->output, ohead);
+io.c:466:				Ply[i].io->otail = otail;
+io.c:475:				n = write(i, &Ply[i].io->output[otail],
+io.c:478:					write(Spy[i], &Ply[i].io->output[otail],
+io.c:482:					n+= write(i, Ply[i].io->output, ohead);
+io.c:484:						write(Spy[i], Ply[i].io->output, ohead);
+io.c:491:				Ply[i].io->otail = otail;
+io.c:602:	ohead = Ply[fd].io->ohead;
+io.c:603:	otail = Ply[fd].io->otail;
+io.c:606:		Ply[fd].io->output[ohead] = msg[i];
+io.c:611:			Ply[fd].io->output[ohead] = '\r';
+io.c:617:	Ply[fd].io->ohead = ohead;
+io.c:618:	Ply[fd].io->otail = otail;
+io.c:636:			if(Ply[i].io->commands == -1) {
+io.c:640:			if(!Ply[i].io->commands) continue;
+io.c:641:			itail = Ply[i].io->itail;
+io.c:642:			ihead = Ply[i].io->ihead;
+io.c:649:				if(Ply[i].io->input[itail] == 13 ||
+io.c:650:				   Ply[i].io->input[itail] == 10) {
+io.c:655:				buf[j] = Ply[i].io->input[itail];
+io.c:658:			Ply[i].io->itail = itail;
+io.c:659:			Ply[i].io->commands--;
+io.c:664:			(*Ply[i].io->fn) (i, Ply[i].io->fnparam, buf);
+io.c:691:		if(Ply[fd].io->intrpt & 2)
+io.c:1128:			if(Ply[i].io && Ply[i].io->lookup_pid == pid) {
+io.c:1146:		strcpy(Ply[found].io->userid, userid);
+io.c:1148:			userid, address, userid, Ply[found].io->address);
+io.c:1150:			strcpy(Ply[found].io->address, address);
+misc.c:471:				Ply[fd].io->intrpt &= ~1;
+misc.c:533:				Ply[fd].io->intrpt &= ~1;
+player.c:154:			str, Ply[ply_ptr->fd].io->address, ply_ptr->name, str2);
+post.c:65:	Ply[fd].io->intrpt &= ~1;
+post.c:66:	Ply[fd].io->fn = postedit;
+post.c:67:	Ply[fd].io->fnparam = 1;
+post.c:127:	Ply[fd].io->intrpt &= ~1;
+post.c:221:            Ply[fd].io->intrpt &= ~1;
+post.c:222:            Ply[fd].io->fn = noteedit;
+post.c:223:            Ply[fd].io->fnparam = 1;
+post.c:284:    Ply[fd].io->intrpt &= ~1;
+post.c:319:            Ply[fd].io->intrpt &= ~1;
+post.c:320:            Ply[fd].io->fn = newsedit;
+post.c:321:            Ply[fd].io->fnparam = 1;
+post.c:404:    Ply[fd].io->intrpt &= ~1;
+talk.c:740:	if((!strcmp(Ply[fd].io->userid, "no_port") || 
+talk.c:741:		!strcmp(Ply[fd].io->userid, "unknown")) && 
+update.c:118:        if(t - Ply[i].io->ltime > tout && Ply[i].io->fn != waiting) {
+update.c:869:		if(!strcmp(Ply[i].io->userid, Ply[l].io->userid) && 
+update.c:870:	   		!= l && strcmp(Ply[i].io->userid, "no_port") && 
+update.c:871:	   			strcmp(Ply[i].io->userid, "unknown")) {
+update.c:877:	if((strcmp(Ply[i].io->userid, "no_port") && 
+update.c:878:	    strcmp(Ply[i].io->userid, "unknown")) &&
+update.c:902:        if(strcmp(Lockout[j].userid, Ply[i].io->userid))  
+update.c:923:	if((!strcmp(Ply[i].io->userid, "no_port") || 
+update.c:924:		!strcmp(Ply[i].io->userid, "unknown")) && 

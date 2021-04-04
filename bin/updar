@@ -1,0 +1,5 @@
+#!/bin/bash
+mudfile=`ps -ax | grep DAR`
+if [ !mudfile ]; then /app/mud/darbonne/src/DAR -r &
+fi
+

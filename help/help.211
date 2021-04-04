@@ -1,0 +1,8 @@
+	CRIPPLE <monster/player> [#]
+
+This command allows fighters and assassins to cripple an opponent, 
+knocking the foe to the floor for several seconds and inflicting a 
+small amount of damage.  Each time a fighter or assassin succeeds, 
+the monster becomes easier to hit.  
+The attempt to cripple may be used at any time during combat.
+

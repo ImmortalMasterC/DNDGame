@@ -1,0 +1,22 @@
+help.119
+
+	*add [r|c|o] [#]
+
+    This creates a new room in the database, or a new creature or object 
+for editing.  A number must be specified when creating a new room, but
+objects will arrive in your inventory, and creatures will be loaded into
+the room.
+
+    NOTE: Rooms are automatically added to the database, whereas creatures
+and objects must be saved after completion using the *save command. 
+
+example:
+:*add r 4123
+Room #4123 created
+
+:*add c
+A clay form just arrived.
+Creature created. 
+
+:*add o
+Generic item added to your inventory.

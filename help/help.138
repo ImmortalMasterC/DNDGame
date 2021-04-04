@@ -1,0 +1,25 @@
+help.138
+
+	*ONAME <object> [#] [-dok] <name>
+
+	Allows a DM to change the name, description, output string, or key 
+words of an object.  The action does not affect objects in the database, but 
+only changes the one item.  However, the changed item can be saved as a new 
+object in the database with the *save o <object-name> <index> command. 
+
+example:
+: *on sword -k2 red
+Key done.
+	{sets the second key on the sword to red}
+
+:*on sword -d It's a red sword covered in blood.
+Description done.
+	{sets the description of the sword} 
+
+:*on sword -o It's pretty heavy.
+Output String done.
+	{sets the output string on the sword}
+
+:*on sword sabre
+Name done.
+	{changes the name from sword to sabre}

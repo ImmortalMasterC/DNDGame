@@ -1,0 +1,12 @@
+	REMOVE <object> [#]
+
+Remove allows you to remove anything you are wearing, wielding or 
+holding.  To see what you are currently wearing, wielding and 
+holding, use the "EQUIPMENT" command.  "remove all" will remove 
+everything on your person and place it in your inventory.
+
+: eq
+Wielded: a small knife
+: remove knife
+You removed a small knife.
+

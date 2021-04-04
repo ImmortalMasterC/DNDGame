@@ -1,0 +1,20 @@
+spell.66
+
+absolve
+Clerics and monks who have reached a state of grace, being 
+exceptionally good, have been given the power to absolve other 
+player's sins.  When a eclesiastic casts an absolution spell on 
+an evil player with a red aura, the evil one takes on a neutral 
+gray aura and can then easily get back to being good.  One cannot 
+absolve himself, however.
+
+Alith, being the good and kind diety that he is, requires but a
+modest 2000 pieces of gold as a tithe to his temple for this
+service.  In addition, most clerics and monks find this is a way 
+to supplement their income and may charge an additional amount 
+for the service.  Alith encourages this, as it makes for a happy 
+priesthood.
+ 
+MP cost: 20      Syntax: cast absolve <player>
+~
+

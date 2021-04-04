@@ -1,0 +1,9 @@
+spell.11
+
+teleport:   
+This spell randomly places its target anywhere in the realm,
+except when home is the target.  Be default home is the first
+room at login, but may be changed to the current room with the 
+command:  set home
+
+MP cost: 20 		Syntax: cast teleport <target>

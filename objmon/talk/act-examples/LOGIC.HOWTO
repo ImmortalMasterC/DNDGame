@@ -1,0 +1,120 @@
+
+Action/Logic Creature
+
+Logic creatures are a very powerful and compact script language 
+to give monsters a list of actions to perform.  The action can 
+be a simple stream of repeating commands or a complex script with 
+test for objects, monsters, players, races and many more.  Command 
+branching can be forced on success of a test or on the failure of 
+a test. 
+
+Logic Scripts:
+
+The logic script has the ability to test, jump and loop.  There are 
+also action commands.  The logic script file each monster is stored 
+in the objmon/talk directory.
+Creatures cannot have both a talk script and a logic script.  Also,
+Logic scripts must end with -act after the level.  e.g.  cat-2-act
+
+The following is a list of commands avalible, and the file format 
+of action scripts.
+=======================================================================
+
+A simple 3 block logic script may look like this.
+
+	?R:6 !1:1         
+	*
+	>S
+	look, a foul orc is here!
+	>E @1
+	Every head in the pub turns to look at the orc.
+
+Logic scripts are always built in two-line command blocks.
+The first line has a syntax line (?R:6 !1:1) and the next line is 
+a text script.  If no text is used, there must be an asterisk in
+that line.
+
+In the above script the '?' tests for an orc present in the room.
+It does this by testing for race and index number.  The letter 'R' 
+is for race, and the index of 6 is an orc. 
+
+The ! is the NOT condition, and is used as a true/false test.
+If race 6 is not found, a jump to command 1 is executed, which simply
+loops back to the beginning of the line.  If an orc is present, the
+test is true and control drops to the next command block.
+This simple example might be confusing, so a further explanation is
+as follows:  The syntax 1:1 refers to two lines --  in this case the
+references are both to line one.  The number before the colon says
+which line to test, and the number after the colon is the line to go
+to, based on the result of the test.  So, for this example, we both
+test line 1 and goto line 1 if the test does not find an orc in the
+room.
+
+The next command block is another action command.   '>' and uses 'S' 
+to have the monster say what is in the following text line.  
+
+The last command block is also an action pair:  >E cause the line
+below it to be echoed to the entire room.
+
+Once a script reaches the bottom it starts all over again.
+=======================================================================
+
+
+Script Syntax
+-------------
+?                  -- Test command takes several arguments
+!                  -- Not succesful then goto
+@                  -- unconditional goto  
+=                  -- Test successful then goto 
+>                  -- Perform action, takes arguments
+
+
+=======================================================================
+Notes: 
+
+	? - Test 
+
+Test can take a number of arguments as follows
+?R:<#>    Test for a certain player race in the room.
+?O:<#>    Test for a specified object in the room.
+?o:<#>    Test for a specified object on a player in the room.
+?C:<#>    Test for a specified player class in the room
+?P        Test for a player in the room.  Next line provides name.
+?M        Test for a creature in the room.  Next line provides name.
+?t:<#>    Test for time (hour).
+?r:<#>    Test for room.
+
+	if a test for a creature/player/object is successful,
+	a pointer to the target is retained and actions can 
+	then be performed on the target.
+
+
+	! - if not successful goto 
+-------------------------------
+!<#>:<#>      The first number is the command to test, and the second
+              number is the jump destination line if the test is false.
+      
+            
+	= - if successful goto 
+-------------------------------
+=<#>:<#>      The first number is the command to test, and the second
+              number is the jump destination line if the test is true.
+
+
+	@ - uncoditional jump
+-------------------------------
+@<#>          Supply the number of the line to jump to.
+              NOTE:  Remember that command lines occur in pairs, and 
+                     that the text line is not counted as a line.  
+
+
+	> - an action command
+-------------------------------
+>E	Echo text in target string. 
+>S	Say text in target string.
+>A	Attack monster in target string.
+>a	Attack player (chosen by condition)
+>+set    MPGUAR            >-clear  MPGUAR
+
+>0  Go N      >1  Go NE      >2  Go E      >3  Go SE      >4  Go S
+>5  Go SW     >6  Go W       >7  Go NW     >8  Go up      >9  Go down

@@ -1,0 +1,7 @@
+spell.54
+
+silence:
+This spell causes the target player or creature to become silent,
+thereby unable to speak or recite scrolls.
+
+MP cost: 25		Syntax: cast silence <target>

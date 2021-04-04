@@ -1,0 +1,40 @@
+A monster can be used as a sentinel for a doorway
+which he will guard until given a password.
+
+The monster must have SPECIAL = 1 and the following 
+flags should be set:
+Flag  1	   Permanent
+     22    Detects Invisibility
+     24    Talks
+     25    Unkillable
+     39    Passive Guard
+     67    Cannot be bribed
+     70    Accepts Password
+
+The room's guarded doorway must have this flag set:
+Flag 19    Guarded exit
+
+The room must also have the sentry placed as a
+permanent monster with 0 time of return. 
+
+A talk file has to be created in the directory objmon/talk
+where the action word is the password.  A talk response
+is not necessary, but may be used.
+NOTE:  More than one action word may be used so as to
+to create a multiple password protected doorway.
+The talk file syntax is:
+<password>
+<text response>
+
+When the monster is given the password, it leaves and
+the doorway is left unguarded.  The monster returns as
+soon as the room is clear. 
+
+Do not add any talk sequences to the talk file, else any
+active keyword will cause the monster to leave his post.
+(This could be used as a feature where any keyword in the
+talk file would cause the guard to leave.  It doesn't have
+to be the player's password.)
+
+
+

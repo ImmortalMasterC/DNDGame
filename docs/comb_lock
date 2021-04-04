@@ -1,0 +1,40 @@
+		HOW TO MAKE A COMBINATION LOCK
+
+An easy way to create a combination lock is to have the player push
+a series of buttons in the correct order.  Any single button can be
+pushed more than once.
+Generally, buttons are colored and the black button is the RESET button.
+When you create them in the editor, they are TYPE 13 and SPECIAL 2.
+Here's an example:
+
+Let's make a red, white and blue button to use for a combination lock. 
+We will also need a black button for the Reset.
+
+Set the shots to 0/0
+
+Set the dice differently for each button:
+
+	red     0d1 + 2
+	blue    0d2 + 2
+	white   0d3 + 2
+
+The reset button is different.  Set the dice for the reset like this:
+
+	black	1d0 + 2
+
+In the output string of each button, put the combination... 
+which is the order you want the buttons to be pushed.  Like this:
+
+	0122132
+
+Now, the player must push the buttons in this order:
+
+	black red blue blue red white blue
+
+Next, you need to set flags 1 (permanent) and 18 (notake) and put 
+the buttons in the room as permanent objects. 
+
+Don't forget to set the exit flags 3,4,5,6, and 7
+
+
+

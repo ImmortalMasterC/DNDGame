@@ -1,0 +1,27 @@
+  #   Potion		   Spell		Shots	Value	Wgt	Magic
+==============================================================================
+134.  blue bubbly potion   levitation		 1	  400	  1	  22
+150.  sparkling		   vigor		 1	  100	  1	  01
+151.  green flagon	   curepoison		 3	  100	  1	  04
+152.  translucent	   invisible		 1	  300	  1	  08
+153.  purple bottle	   detect-invis		 1	  250	  1	  10
+154.  blue glowing bottle  mend-wounds		 2	  100	  1	  19
+155.  freezing slush  	   resist-fire		 1	  200	  1	  23
+156.  hazy white	   word-of-recall	 1	  400	  1	  17
+157.  hazy black	   teleport		 1	  150	  1	  12
+158.  silver chalice	   protection		 1	  200	  1	  06
+159.  gold chalice	   bless		 1	  250	  1	  05
+160.  perceptor's	   know-alignment	 1	  100	  1	  42
+161.  amber vial	   restore		 1	  100	  1	  09
+162.  frosty potion	   resist-fire		 3	  500	  1	  23
+163.  pink potion	   cure-disease		 1	  600	  1	  49
+164.  dark elixer	   super-strength	 1	  300	  1	  57
+165.  keg o' rum	   teleport		 3	  600	  8	  12
+179.  brass demijohn	   breath-water		 5	 1000	  4	  45
+184.  apple wine jug	   cure-blindness	 1	  400	  1	  50 
+189.  sky blue potion	   fly			 3	  300	  0	  24
+190.  bottle liquid fire   resist-cold		 3	  300	  1	  44
+191.  chalacye juice	   remove-silence	 1	  500	  1	  56
+192.  tiny pewter bottle   shrink		 1	  300	  1	  59
+193.  reflective bottle	   reflect-spells	 1	 1000	  1	  60
+248.  charcoal potion	   dispel                1	 1000	  1	  68

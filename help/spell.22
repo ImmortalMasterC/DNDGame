@@ -1,0 +1,7 @@
+spell.22
+
+resist-fire:   
+This spell reduces the damage caused by fire breathing monsters, 
+thereby providing some level of protection.
+
+MP cost: 12 		Syntax: cast resist-fire <target>

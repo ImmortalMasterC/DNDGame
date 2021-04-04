@@ -1,0 +1,18 @@
+	PLEAD <monster> [#]
+
+This command allows a player to plead for mercy from an opponent. 
+If the plea is granted, the monster stops attacking.   There is
+a loss of experience for the player, but not as much as the loss
+would be if the player died.  
+
+The chance of the monster granting mercy increases as the level of
+the monster exceeds the level of the player, and decreases when the
+monster's level is below that of the player.
+
+For players less than level 10, the loss is approximately 2% of 
+their total experience.  For level 10 and above the loss is only 1%.   
+
+Alith considers such acts of mercy on the part of the monster worthy 
+of a reward.
+
+NOTE:  The word "mercy" can be substituted for the word "plead."

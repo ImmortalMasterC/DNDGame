@@ -1,0 +1,10 @@
+help.143
+
+	*ATTACK <monster> <player>
+
+	Causes the named monster to attack the named player.
+
+example:
+:*att nobleman enforcer
+Adding Enforcer to attack list of nobleman.
+A nobleman attacks Enforcer.

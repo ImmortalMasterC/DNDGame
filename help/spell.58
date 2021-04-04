@@ -1,0 +1,8 @@
+spell.58
+
+shrink:   This spell shrinks its target to mouse size, thus enabling the
+player to enter very small openings that would otherwise be inacessable.
+The spell is removed when the player tries to get an object.  This spell
+can only be cast once each day.
+
+MP cost: 30 		Syntax: cast shrink <target>

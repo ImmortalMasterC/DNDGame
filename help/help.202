@@ -1,0 +1,9 @@
+	HOME
+
+This command will tell you where your home room is located. 
+By default your home room is the first room you login each time,
+but you may set it to any room you are presently in by simply
+typing the command:  set home
+You may use the teleport spell to return to your home room if
+you have sufficient MP.  type the command:  teleport home.
+

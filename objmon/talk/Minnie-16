@@ -1,0 +1,25 @@
+things
+These things are different, depending on which level you seek.  tell me, what is your level right now?
+six
+Then you hope to advance to level seven.  Good.  You will have no problem stealing a clock from the shop owner in Stonehaven.  It is a rare navigator's clock, and he is the only one who has it.  Do not bring me one of those imitations which he sells.  When you return, I will trade you a key to the training room.
+seven
+Very Good.  Then you hope to advance to level eight.  Well, I have a client who needs a handbook from the desk of Squire Mercator in the Mercator mansion.  Are you a good enough burglar that you could bring me that?  I will be happy to trade you a training room key for that particular handbook.
+eight
+If you are level eight now, and hope to get to level nine, then you will need a key to that third door.  I have it, but I will only trade it for a rare signet ring from the collection of rings stored in the old Vickers mansion.
+nine
+And you wish to advance to level ten?  A client of mine has requested that I steal a feather from the hut of Claune, the cloud giant.  I don't know the purpose of the feather, and I took the assignment against my better judgment as I have a fear of flying, but perhaps you would obtain it for me?  I can trade a key for it.  A key that you need, I'm afraid.
+ten
+To advance to level eleven I must ask you to take on a dangerous mission.  In order to raise money for the new training facilities, we wish to auction some rare artifacts.  Perhaps you could find us the horn of a unicorn?  I understand unicorns frequent the Enchanted Forest, in a hidden glen.  If you could find it, you might be able to bring us a horn.  Please try.  I have a key I will trade for it.
+eleven ACTION bow
+You have completed all of the missions I have given you.  I have no more requests of you.  If you wish to take the final training session that this guild offers, simply go through that last door.  Unfortunately I have lost the key to it and you will have to use your lockpicking talents.  Once in there, you will find information concerning where you must go to advance higher.  Good luck.
+key
+I have a key for each training room and each room is for a different level.  Perhaps you will tell me your present level?
+train
+You will need a key for the training room door.
+door
+You will need a key to enter there.  I have a key to each room, but will only trade it to you for something in return.  What level are you?
+room
+I have a key for each training room and each room is for a different level.  Perhaps you will tell me your present level?
+trade
+If you give me something, I will consider it a gift and I will keep it.  However, if you trade me an item which I require, I will happily give you a key in return.  What level are you presently?
+

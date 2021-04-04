@@ -1,0 +1,195 @@
+/**************************************************************************/
+/*								flee								      */
+/**************************************************************************/
+/* This function allows a player to flee from an enemy.  If successful 	  */
+/* the player will drop his readied weapon and run through one of the     */
+/* visible exits, losing 10% or 1000 experience, whichever is less.       */
+
+int flee(ply_ptr, cmnd)
+creature	*ply_ptr;
+cmd		*cmnd;
+
+{
+	room	*rom_ptr;
+	xtag	*xp;
+	ctag	*cp;
+	char 	found = 0;
+	int		fd, n;
+	long	i, t;
+	int     **scared_of = &Ply[ply_ptr->fd].extr->scared_of;
+	int     scared = 1,  *scary;
+	int     found_non_scary = 0,  found_scary = 0;
+
+
+	rom_ptr = ply_ptr->parent_rom;
+	fd = ply_ptr->fd;
+
+	t = time(0);
+	i = MAX(ply_ptr->lasttime[LT_ATTCK].ltime,
+		ply_ptr->lasttime[LT_SPELL].ltime) + 4L;
+
+	if(t < i && !F_ISSET(ply_ptr, PFEARS)) {
+		please_wait(fd, i-t);
+		return(0);
+	}
+	t = Time%24L;
+	while(1) {
+		xp = rom_ptr->first_ext;
+		if(xp) do {
+			found=0;
+			if(F_ISSET(xp->ext, XCLOSD)) continue;
+			if((F_ISSET(xp->ext, XCLIMB) || F_ISSET(xp->ext, XDCLIM)) &&  
+				(!F_ISSET(ply_ptr, PLEVIT))) continue; 
+			if(F_ISSET(xp->ext, XNAKED) && weight_ply(ply_ptr)) continue;
+	        if(F_ISSET(xp->ext, XFEMAL) && F_ISSET(ply_ptr, PMALES)) continue;
+	        if(F_ISSET(xp->ext, XMALES) && !F_ISSET(ply_ptr, PMALES)) continue; 
+			if(F_ISSET(xp->ext, XFLYSP) && !F_ISSET(ply_ptr, PFLYSP)) continue;
+			if(!F_ISSET(ply_ptr, PDINVI) && F_ISSET(xp->ext, XINVIS)) continue;
+			if(F_ISSET(xp->ext, XSECRT)) continue;
+			if(F_ISSET(xp->ext, XNOSEE)) continue;
+			if(F_ISSET(xp->ext, XPLDGK)) 
+				if(!F_ISSET(ply_ptr, PPLDGK)) continue;
+			else if (BOOL(F_ISSET(xp->ext,XKNGDM)) !=
+				BOOL(F_ISSET(ply_ptr, PKNGDM))) continue;
+			if(F_ISSET(xp->ext, XNGHTO) && (t>6 && t < 20)) continue;
+			if(F_ISSET(xp->ext, XDAYON) && (t<6 || t > 20))  continue;
+			if(F_ISSET(xp->ext, XPLSEL) &&!F_ISSET(xp->ext, 
+				XPLSEL + ply_ptr->class)) continue;
+    		if(F_ISSET(xp->ext,XPGUAR)) {
+        		cp = rom_ptr->first_mon;
+        		while(cp) {
+        		    if(F_ISSET(cp->crt, MPGUAR) && 
+        			    !F_ISSET(ply_ptr, PINVIS) && 
+						ply_ptr->class < CARETAKER) {
+							found = 1;
+							break;
+        	    	}
+        	    	cp = cp->next_tag;
+        		}
+				if(found) continue;
+    		}
+
+/* check to see if the destination room is scary */
+			if(scared && *scared_of) {
+				scary = *scared_of;
+				while(*scary) {
+					if(*scary == xp->ext->room) {
+						print(fd, "Scared of going %s!\n", xp->ext->name);
+						found = 1;
+						found_scary = 1;
+						break;
+					}
+					scary++;
+				}
+				if(found) continue;
+			}
+
+			found_non_scary = 1;         
+			if(mrand(1,100) < (65 + bonus[ply_ptr->dexterity]*5)) break;
+		} 
+
+		while(xp = xp->next_tag);
+		if(xp) break; 		/* found an exit that is not scary, continue */
+		if(found_non_scary) break; /* failed to flee to all the non-scary */
+		if(scared && found_scary) {        /* try again not scared */
+			scared = 0;
+		}
+		else 
+			break;                   /* tried everything, give up */
+	}
+ 
+	if(xp && F_ISSET(xp->ext,52) && 
+		mrand(1,5) < 2 && !F_ISSET(ply_ptr, PFEARS))
+			xp = 0;
+			if(!xp) {
+				print(fd, "You failed to escape!\n");
+				return(0);
+			}
+
+/* update the scary list */
+	scary = *scared_of;
+	{
+		int room = rom_ptr->rom_num;
+		if(scary) {
+			int size = 0;
+			while(*scary) {
+				size++;
+				if(*scary == room) break;
+				scary++;
+			}
+			if(!*scary) {
+				*scared_of =(int*)realloc(*scared_of, (size+2)*sizeof(int));
+				(*scared_of)[size] = room;
+				(*scared_of)[size+1] = 0;
+			}
+		} 
+		else {
+			*scared_of = (int*)malloc(sizeof(int)*2);
+			(*scared_of)[0] = room;
+			(*scared_of)[1] = 0;
+		}
+	}
+
+	if(ply_ptr->ready[WIELD-1] &&
+		!F_ISSET(ply_ptr->ready[WIELD-1], OCURSE)) {
+			add_obj_rom(ply_ptr->ready[WIELD-1], rom_ptr);
+			ply_ptr->ready[WIELD-1] = 0;
+			compute_thaco(ply_ptr);
+			compute_ac(ply_ptr);
+			print(fd, "You drop your weapon and run like a chicken.\n");
+	}
+	else
+		print(fd, "You run like a chicken.\n");
+
+	F_CLR(ply_ptr, PHIDDN);
+
+	if(F_ISSET(ply_ptr, PFEARS)) {
+		ANSI(fd, RED);
+		print(fd, "You flee in fear!\n");
+		ANSI(fd, WHITE);
+	}
+
+	if(!F_ISSET(rom_ptr, RPTRAK))
+		strcpy(rom_ptr->track, xp->ext->name);
+
+	broadcast_rom(fd, rom_ptr->rom_num, "%M flees to the %s.", 
+		ply_ptr, xp->ext->name);
+
+	if(ply_ptr->class == PALADIN)
+		if(ply_ptr->level > 5) {
+			n = ply_ptr->level*15;
+			n = MIN(ply_ptr->experience, n);
+			print(fd,"You lose %d experience for your cowardly retreat.\n",n);
+			ply_ptr->experience -= n;
+			lower_prof(ply_ptr,n);
+		}
+
+	load_rom(xp->ext->room, &rom_ptr);
+
+	if(rom_ptr->lolevel > ply_ptr->level || 
+		(ply_ptr->level > rom_ptr->hilevel && rom_ptr->hilevel)) {
+			print(fd, "You are thrown back by an invisible force.\n");
+			broadcast_rom(fd, rom_ptr->rom_num, "%M just arrived.",ply_ptr);
+			return(0);
+	}
+
+	n = count_vis_ply(rom_ptr);
+	if((F_ISSET(rom_ptr, RONEPL) && n > 0) ||
+		(F_ISSET(rom_ptr, RTWOPL) && n > 1) ||
+		(F_ISSET(rom_ptr, RTHREE) && n > 2)) {
+			print(fd, "The room you fled to was full!\n");
+			broadcast_rom(fd, rom_ptr->rom_num, "%M just arrived.", ply_ptr);
+			return(0);
+	}
+
+	if(F_ISSET(ply_ptr, PALIAS)) {
+		del_crt_rom(Ply[ply_ptr->fd].extr->alias_crt, ply_ptr->parent_rom);
+		add_crt_rom(Ply[ply_ptr->fd].extr->alias_crt, rom_ptr, 1);
+	}
+
+	del_ply_rom(ply_ptr, ply_ptr->parent_rom);
+	add_ply_rom(ply_ptr, rom_ptr);
+	check_traps(ply_ptr, rom_ptr);
+
+	return(0);
+}

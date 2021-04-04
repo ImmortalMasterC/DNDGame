@@ -1,0 +1,10 @@
+spell.56
+
+fortune:
+This spell can only be cast by bards, and allows the bard to
+roughly determine the level of luck enjoyed by the target.
+When cast on one's self, the spell requires only 2 MP, but
+casting on a target requires 4 MP.
+
+MP cost: 2		Syntax:  cast fortune
+MP cost: 4		Syntax:  cast fortune <target>

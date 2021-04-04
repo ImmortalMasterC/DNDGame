@@ -1,0 +1,13 @@
+	LOSE <player>
+	NOFOLLOW <player>
+
+Either command can be used with or without a <player>
+The command allows you to "lose" a person that is following you,
+effectively kicking him or her out of your group.  Use this command 
+if there is someone following you that you would prefer not to have 
+following you.  If you do not want anyone to follow you, there is a
+SET command you can use.  For more information, type:  help set
+If you do not specify a target you can also use the LOSE command to
+stop following another player.
+Also see this command: FOLLOW
+

@@ -1,0 +1,11 @@
+	CHANNELEMOTE <message>
+
+This command allows a player to broadcast an emote message to all
+players presently logged on.  The message is prepended with the name
+of the character.
+
+Example:  (If your character's name is Titan)
+If you type:	
+chem defeats an army of moutain trolls!
+Everyone on the game will see this message:
+### Titan defeats an army of mountain trolls!

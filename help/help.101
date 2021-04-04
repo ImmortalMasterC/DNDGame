@@ -1,0 +1,23 @@
+help.101
+
+	*TELEPORT <room # | player > [ player2 | . ]
+
+	This is the DM mode of transit.  You can teleport to anyone, or to 
+any room.  You can also use this to teleport a player directly to you, 
+to a specified room number, or to another player.  Teleporting to a 
+negative number (any negative number) will return you to the last room 
+from which you teleported.
+
+examples:
+:*teleport gonzo 
+	{You arrive in a room with Gonzo}
+:*teleport gonzo .
+	{Gonzo arrives in the room you are in, not unlike a summon}
+:*teleport gonzo mithrandir
+	{Gonzo is teleported to the room Mithrandir is in}
+:*teleport gonzo 677 
+	{Gonzo is teleported to room number 677}
+:*t 34
+	{You teleport to room number 34}
+:*t -1
+	{You teleport back to the last room you teleported from}

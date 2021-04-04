@@ -1,0 +1,10 @@
+	PREP
+
+This class skill allows experienced Druids to make herbal concoctions 
+that can harm, heal, or cure.  The type of concoction depends upon the 
+type of herb prepared.  During the preparation process, the druid may not 
+attack, nor wield a weapon, and they must hold the herbs that they are 
+preparing until they are complete.
+
+:prep herb
+

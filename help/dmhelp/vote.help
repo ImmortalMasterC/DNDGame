@@ -1,0 +1,37 @@
+
+VOTE:
+To use the vote utility, first put a file called ISSUE in the post directory.
+Next, in the player directory you need to make a subdirectory called vote. 
+This is where the vote tally will be accumulated.
+
+ISSUE must have the following:
+	On the first line, put the number of issues you will be voting on.
+	Then on each line, describe the issues to be voted on.  Make sure to 
+	precede each issue to be voted on with a letter from a-g.
+EXAMPLE:
+	3
+	Choose one: a) more DM's  b) less DM's  c) no DM's
+	Make a choice to give players:  d) free exp  e) free spells
+	Decide the following: f) modern weapons  g) no modern weapons
+
+ROOM:
+Create a room in the game that is designated as a voting booth.  Set the
+room flag #35.  It would probably be best to also make it a single player
+room, and no teleport.  As a side benefit, set the heal fast flag.
+
+You might find it convenient to put an election_sign in the vote booth 
+so you can give more information on the issues.  Such as:
+	The issues we will be voting on are:
+	  1st, About the DM's
+	  2nd, Which would you rather have if given the choice
+	  3rd, Decide if modern weapons should be allowed 
+
+REMINDER: 
+The Mordor src code is defaulted so that player must be 4th level and 
+21 game-years old in order to vote.   (The age 21 requirement might need
+to be changed. -Styx)
+
+
+==============================================================================
+William Briesemaster					  ^^^Moosengard^^^
+------------------------------------------------------------------------------

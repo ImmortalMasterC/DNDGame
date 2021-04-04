@@ -1,0 +1,8 @@
+	EQUIPMENT
+
+Equipment shows you a list of the objects that you are currently 
+wearing, wielding and holding.  Your armor class, AC, starts at
+10 when you are not wearing anything, and decreases as you wear
+more items.  A low AC makes it difficult for you to be hit during
+a fight.  Some items lower your AC better than others.
+

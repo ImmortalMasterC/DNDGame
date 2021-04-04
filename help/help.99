@@ -1,0 +1,7 @@
+	CLASSSEND <message>
+	abbreviate as:  clse
+
+This command, followed by a message, allows you to send your comments
+to everyone who is the same class as your character.  e.g.  If you are
+a ranger, then all rangers, but only rangers, will hear your broadcast.
+

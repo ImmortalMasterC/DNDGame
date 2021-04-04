@@ -1,0 +1,9 @@
+spell.57
+
+super-strength:   
+This spell gives a player extra hitpoints and allows the player 
+to carry double the normal amount of weight.  The amount of extra 
+hitpoints depends on the target player's level and lasts for only 
+a short duration.
+
+MP Cost: 12 		Syntax: cast super-strength <target>

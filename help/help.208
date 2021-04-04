@@ -1,0 +1,12 @@
+	STEALGOLD [from] <player/monster> [#]
+
+Thieves may steal gold from monsters or other players.  If they 
+are successful, the victim will not even know he or she had their 
+gold taken.  However, if unsuccessful, the victim is warned.  
+Monsters will attack if they become aware that someone is trying 
+to take their gold.
+
+CAUTION:  Just because you CAN steal, don't abuse it.  Its easy
+          to become a real jerk and make enemies you don't need.
+
+Related Commands:  stealgold, steal, peek, distract

@@ -1,0 +1,13 @@
+help.103
+
+	*RELOAD
+
+	Reloads room into memory from disk.  Use this command to fix a 
+bad room, or to load room changes made after editing.
+
+example:
+
+:*reload
+Ok.
+
+

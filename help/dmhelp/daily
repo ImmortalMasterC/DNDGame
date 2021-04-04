@@ -1,0 +1,14 @@
+0       Daily broadcasts            DL_BROAD        
+1       Daily enchants              DL_ENCHA        
+2       Daily heals                 DL_FHEAL         
+3       Daily track spells          DL_TRACK        
+4       Daily defecations           DL_DEFEC        
+5       Daily charms                DL_CHARM           
+6       Daily super-strengths       DL_STRNG        
+7       Daily wand recharges        DL_RCHRG        
+8       Daily mouse-size            DL_SHRNK        
+9       Daily channel broadcasts    DL_BROAE        
+10      Daily conjure               DL_CONJR                
+
+Syntax:  *set c Tristan dl 2
+

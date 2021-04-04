@@ -1,0 +1,41 @@
+Backup files
+Every morning at 5:00 AM California time, there is an automatic backup
+of all players.  Once each week, on Sunday, there is a weekly backup of
+players.  Player files are located in /app/mud/darbonne/player and the
+BACKUP directory is one level lower.  The WEEK directory is below that.
+
+If there is a game crash and a player gets wiped out, he can be restored
+from one of these two backups.  This is the procedure for doing it.
+(You must have a login account on this machine to do this.)
+
+
+1.	cd /app/mud/darbonne/player    # Go to the player directory
+
+2.	ls -l <Player*>                # Don't forget to capitalize!
+	  If the size of the file is 0, or does not exist, then you need
+	  to copy the backup file to this directory.  Sometimes you will
+	  find both a zero length file and a file with a tilde after it.
+	  They may look like this:
+	-rw-r-----   1 dm       users         0 Mar 21 05:00 Styx
+	-rw-r-----   1 dm       users         995 Mar 21 05:00 Styx~
+	  If the second one exists, you can just copy it to the first.
+	  If it does not exist, that's when you need to copy the backup
+	  file to the current file.
+
+3	This is the copy command.
+3a.	cp Styx~ Styx                  # Do this if you have a tilde file.
+3b.	cp BACKUP/Styx .               # This will make a copy of the backup.
+	  If the backup does not exist, or is zero length also, then the 
+	  damage was done just prior to the automatic backup and the bad
+	  file was put into BACKUP.  If that happens, get the backup file
+	  from WEEK.  It will be a few days old, but it will exist.
+3c.	cp BACKUP/WEEK/Styx .          # that period is important!
+
+4.	After the repair is made, be sure you call the editor and use it
+	to discover the player's password.  Then try to login that player.
+	Sometimes the player file is so corrupted it will crash the game
+	and needs to be removed from the database.  To remove a player file:
+
+4a.	rm <Player>                   # this is the remove command.
+
+

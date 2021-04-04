@@ -1,0 +1,11 @@
+
+	FINGER [player]
+
+	This function fingers any player in the database,
+	whether logged in or not.
+
+example:
+: finger fin
+Fin                    Hobbit         Slasher
+last login: Mon Mar 31 11:04:58 2003
+No mail.

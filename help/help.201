@@ -1,0 +1,11 @@
+	RESCUE <player> <monster>
+
+The RESCUE command allows one player to step into a fight between a 
+monster and another player.  For any rescuer except a paladin, there 
+is a 50% chance that the monster will stop attacking the player being 
+rescued, but a 100% chance that the monster will begin attacking the 
+rescuer.  For paladins, the chance of success will be greater than 
+50% depending on the paladin's level and goodness.  Paladins also
+gain a small amount of experience for rescues.
+Evil players will move toward good alignment unless the player being
+rescued is also evil, then there is no change in alignment status.

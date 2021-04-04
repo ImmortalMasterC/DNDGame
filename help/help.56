@@ -1,0 +1,19 @@
+	TALK <monster> [#] [<keyword>]
+	ASK <monster> [#] [<keyword>]
+
+Talk or ask allows you to communicate with certain monsters.  Some 
+monsters can carry on interactive conversations.  If you supply a 
+keyword, (usually one of the words in the monster's previous sentences.)
+the monster may be able to give you some more information about it.
+
+If you are hidden and you talk, your status will change and you will no
+longer be hidden from view.
+
+Example:
+
+: talk scribe
+The scribe says to you, "<Yawn> You bore me."
+: ask scribe bore
+The scribe says to you, "Yes, you are a boring fellow.  I see no reason
+   to continue a rational discussion with you."
+

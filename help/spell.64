@@ -1,0 +1,15 @@
+spell.64
+
+entangle:
+When this spell is cast on a monster, that monster can no 
+longer block, follow or flee.  
+
+Only three classes, a mage, a druid or an assassin, are capable 
+of casting this spell.  However, any class can use the entangle 
+wand or recite the scroll to use its magic against a monster.
+
+For Mages and Druids
+MP cost: 10
+
+For an Assassin:
+MP cost: 15      Syntax: cast entangle <target>

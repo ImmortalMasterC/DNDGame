@@ -1,0 +1,14 @@
+
+There are 69 spells in the game.
+
+A player's knowledge of spells can be found
+with the command:
+	*spells <player>
+
+A spell can be set/unset with this command:
+	*set c <player> spe <spell name>
+
+NOTE:  Be sure to use the abbreviation spe.
+This command acts like a toggle switch, 
+turning the spell on or off.
+

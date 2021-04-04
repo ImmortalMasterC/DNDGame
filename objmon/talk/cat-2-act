@@ -1,0 +1,28 @@
+?M !1:5
+rat
+>E
+The tomcat growls as he sees the rat.
+>A @1
+*
+@1
+*
+>E
+The cat smugly sharpens a claw.
+?M =6:2
+rat
+>@8
+*
+>E
+The old tomcat eyes you as he watches for rats.
+?M =9:2
+rat
+>E
+The cat yawns.
+>E
+The cat looks around the room and stretches. 
+?M =12:2
+rat
+>S
+meeeoooww
+@1
+*

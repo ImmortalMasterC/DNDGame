@@ -1,0 +1,70 @@
+purpose
+Surely you did not just wander in here.  Tell me of your purpose for being here.  Have you found part of a Master Scroll, by chance?
+scroll
+The Prefect will be most happy to see you if you truly have one of the quest items.
+scrolls
+The Prefect will be most happy to see you if you truly have one of the quest items.
+parchment
+The Prefect will be most happy to see you if you truly have one of the quest items.
+parch
+The Prefect will be most happy to see you if you truly have one of the quest items.
+master
+The Prefect will gladly see you immediately if you carry one of the quest item.
+book
+We only ask you to sign the book if you think you will be looking for a scroll.  We will read the book to Alith at Vespers.
+Vespers
+We hold Vespers in the evening, at which time Alith remembers the adventurers who seek the scrolls.
+quest
+Long ago, when the three mages who lifted this city to the clouds called upon Alith to amplify their power, he warned them of the dangers at the repository where the Master Scrolls were stored.  That danger became reality when Elisha had to fling the four Master Scrolls into the maelstrom.
+repository
+It was where Elisha had taken her stand against the balrogs, but when they were close to overwhelming her, she took the Master Scroll from the vault and cast a powerful spell on it.  She had to throw it to the winds to keep the balrogs from getting it.  Fragments of it still have not been found.
+elisha
+You must speak to Alith himself if you wish to learn of Elisha.
+prefect
+His office is on the other side of the temple behind an invisible door.  Unless you can detect invisible items, you cannot find it, but I can help you if you ask.
+power 
+I can grant you temporary powers with my spells.  However, you must ask me.  I can cast a spell allowing you to detect things invisible, or I can relieve you of poison.
+magic 
+I can grant you temporary powers with my spells.  However, you must ask me.  I can cast a spell allowing you to detect things invisible.
+help 
+I can grant you temporary powers with my spells.  However, you must ask me.  I can cast a spell allowing you to detect things invisible.
+spells 
+I can only cast a spell that you request.  You must ask me specifically for the ability to detect things invisible.
+alith
+My master Alith is the Holy Goat, from whom many powers are derived.  Amongst the pantheon of gods he is the most powerful.  Do not anger him with evilness, for he is vengeful and will find you.  He feels partly responsible for the loss of the four great Master Scrolls, and has vowed to himself that the fragments will not fall to Zeth, the Black Goat.
+goat
+Alith has taken the image of a white goat as his own.  Do you mock him with your question?
+zeth
+I dare not speak further of Zeth.  He holds my sisters to this day, and I am fearful for them.
+detect-inv CAST detect-invisible
+Look about you, and see the things you could not see before.
+det-inv CAST detect-invisible
+Look about you, and see the things you could not see before.
+det-invis CAST detect-invisible
+Look about you, and see the things you could not see before.
+detect-invis CAST detect-invisible
+Look about you, and see the things you could not see before.
+det CAST detect-invisible
+Look about you, and see the things you could not see before.
+detect-invisible CAST detect-invisible
+Look about you, and see the things you could not see before.
+invisible CAST detect-invisible
+Look about you, and see the things you could not see before.
+invis CAST detect-invisible
+Look about you, and see the things you could not see before.
+bless CAST bless
+You have been blessed by Alith.  See that you deserve it.
+protect CAST protection 
+Now you have the protection of Alith.
+prot CAST protection 
+Now you have the protection of Alith.
+poison CAST cure-poison
+The sickness in you is gone, but you could not have lasted much longer.  All power is from Alith, the Holy Goat!
+cure-poison CAST cure-poison
+The sickness in you is gone, but you could not have lasted much longer.  All power is from Alith, the Holy Goat!
+cure-pois CAST cure-poison
+The sickness in you is gone, but you could not have lasted much longer.  All power is from Alith, the Holy Goat!
+pois CAST cure-poison
+The sickness in you is gone, but you could not have lasted much longer.  All power is from Alith, the Holy Goat!
+cure CAST cure-poison
+The sickness in you is gone, but you could not have lasted much longer.  All power is from Alith, the Holy Goat!

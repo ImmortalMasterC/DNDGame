@@ -1,0 +1,193 @@
+help.1		north south east west northeast northwest 
+		    southeast southwest up down out leave dismount
+		    mount left right forward back
+help.2		look consider examine
+help.3		quit goodbye
+help.4		say \ '
+help.5		get take
+help.6		inventory
+help.7		drop put
+help.8		who
+help.9		wear
+help.10		remove
+help.11		equipment
+help.12		hold
+help.13		wield ready
+help.14		help ?
+help.15		health score
+help.16		information
+help.17		send tell flash
+help.18		follow
+help.19		lose
+help.20		group party
+help.21		track
+help.22		peek
+help.23		attack kill
+help.24		search
+help.25		emote ; :
+help.26		hide
+help.27		set
+help.28		clear
+help.29		yell
+help.30		go enter
+help.31		open
+help.32		close shut
+help.33		unlock
+help.34		lock
+help.35		pick
+help.36		steal
+help.37		flee run escape
+help.38		cast
+help.39		study learn read
+help.40		recite
+help.41		list
+help.42		buy
+help.43		sell
+help.44		cost
+help.45		backstab
+help.46		train advance level
+help.47		give
+help.48		fix repair
+help.49		time
+help.50		circle
+help.51		bash
+help.52		save
+help.53		sendmail
+help.54		readmail
+help.55		deletemail	
+help.56		talk ask parley
+help.57		gtalk
+help.58		drink quaff
+help.59		broadcast
+help.60		zap
+help.61		welcome
+help.62		turn
+help.63		bribe
+help.64		haste
+help.65		pray
+help.66		prepare
+help.67		use
+help.68		ignore
+help.69		whois
+help.70		sneak
+help.71		teach
+help.72		pledge
+help.73		rescind
+help.74		purchase
+help.75		selection
+help.76		trade
+help.77		suicide
+help.78		passwd password
+help 79		vote
+help.80		finger
+help.81		charm
+help.82		meditate
+help.83		touch
+help.84		transmute
+help.89		recharge
+help.90 	description
+help.91  	renew
+help.92  	balance  deposit  transfer  withdraw  borrow
+help.93  	newspaper
+help.94  	fasten/unfasten
+help.95  	jimmy
+help.96
+help.97  	channelemote
+help.98  	classemote
+help.99  	classsend
+-------
+help.201	rescue
+help.202	home
+help.203	clear_screen
+help.204	discard fling
+help.205	
+help.206	gaze
+help.207	slit
+help.208	stealgold
+help.209	distract
+help.210	plead mercy
+help.211	cripple
+help.212	snatch grab
+help.213	show
+help.214	fix
+help.215	stumble
+help.216	pay
+help.217	
+help.218	berserk
+
+*****************************************************************
+help.100	nod sleep grab shove stand sit nervous bird ogle
+		relax puke think cheer ponder ack laugh burp frustrate
+		warm tackle knee pounce tickle snicker tap smile beam		
+		masturbate masterbate smoke shake cackle chuckle wave
+		poke yawn sigh bounce shrug twiddle grin frown giggle
+		sing hum snap jump skip dance cry bleed sniff whimper
+		cringe whistle smirk gasp grunt stomp flex curtsy blush
+		faint hug expose wink clap drool copulate goose fume
+		rage pout spit fart comfort pat kill glare slap suck
+		defecate bow cough confused grumble hiccup mutter scratch
+		strut sulk satisfied wince roll raise whine growl high5
+		moon purr taunt eye worship flip groan point
+
+****************************************************************
+
+help.101	*teleport 
+help.102	*rm	
+help.103	*reload
+help.104	*save
+help.105	*create 
+help.106	*perm
+help.107	*invis 
+help.108	*send
+help.109	*purge
+help.110	*ac
+help.111	*users
+help.112	*echo
+help.113	*flushrooms
+help.114	*shutdown
+help.115	*force
+help.116	*flushcrtobj
+help.117	*monster
+help.118	*status
+help.119	*add
+help.120	*set
+help.121	*log
+help.122	*spy
+help.123	*lock
+help.124	*finger
+help.125	*list
+help.126	*info
+help.127	*parameter
+help.128	*silence
+help.129	*broad
+help.130	*replace
+help.131	*name
+help.132	*append
+help.133	*prepend
+help.134	*gcast
+help.135	*group
+help.136	*notepad
+help.137	*delete
+help.138	*oname
+help.139	*cname
+help.140	*active
+help.141	*dust
+help.142	*dmhelp
+help.143	*attack
+help.144	*enemy
+help.145	*charm
+help.146	*auth
+help.147	*possess
+help.148	*tell
+help.149	*memory
+help.150	*find
+help.151	*advance
+help.152	*inventory
+help.153	*spells
+help.154	*quests
+help.155	*news
+help.156	*crtadd *crtsave
+help.157	*objsave
+---------
+help.200	*clear
+

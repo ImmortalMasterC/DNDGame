@@ -1,0 +1,9 @@
+	*set r <name> <bh|bl|f|p|r# #|t|x>
+
+	bh	high level boundary
+	bl	low level boundary
+	f#	flag toggle
+	p	trap exit room
+	r# #2	place monster.  where r# is the random slot, and #2 is monster.
+	t	traffic (not higher than 20%)
+	x	trap

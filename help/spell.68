@@ -1,0 +1,8 @@
+spell.68
+
+resist-acid:   
+This spell protects its target from the damage of acid breath.
+A player is protected from the damages of an acid breathing
+monster.
+
+MP cost: 12 		Syntax: cast resist-acid <target>

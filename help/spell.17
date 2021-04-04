@@ -1,0 +1,10 @@
+spell.17
+
+summon:   
+This spell summons another player to the room of the caster.
+The target player arrives invisible and able to detect invisibilty.
+If you do not wish to be summoned against your will, you can set
+the nosummon flag.  When you do desire to be summoned, be sure to
+clear the flag.
+
+MP cost: 30 		Syntax: cast summon <target>

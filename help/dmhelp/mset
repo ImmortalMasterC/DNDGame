@@ -1,0 +1,8 @@
+	*set m <name> <ar|dn|ds|dp|f|thac>
+
+	ar	armor
+	dn	number of dice
+	ds	sides per die
+	dp	plus 
+	f#	flag toggle
+	thac	thac0

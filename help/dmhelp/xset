@@ -1,0 +1,52 @@
+SETTING EXIT PARAMETERS:
+
+	*set x <name1> <room #> <name2>
+	
+Example:		*set x door 1225 out
+  This will set an exit in the current room called door which will link 
+  to room 1225.  In room 1225, an exit called out will link back to the 
+  current room.  If a period is used for name2, then the exits in both 
+  rooms are given the same name.
+  If name1 is included in the group below, then it can be abreviated, and 
+  name2 can be automatically set by using a period for name2.
+
+north          northwest          northeast          west
+south          southwest          southeast          east
+up             down               trap               out
+left           right              forward
+
+Example:		 *set x ne 1225 .
+  This will set the exit in the current room as northeast, and will link 
+  to room 1225.  The exit in room 1225 will be set to southwest, which is
+  the opposite direction, and will link back to the current room.
+
+If you wish to delete an exit, set it to room 0.
+
+	*set x nrth 0
+
+MULTI-WORD EXIT NAMES:
+  Exits can have more than one word names, but they must be entered with 
+  an underscore between the words.
+
+Example:		*set x great_oaken_door 1225 out
+
+  However, do not use this for name2.  The exit will retain the underscore.
+  Instead, go to the new room and set the exit back to the first room.
+
+FLAGS, MISC AND KEYS:
+  Flags and misc may be set using this syntax:  (See the list of exit flags.)
+
+	*set xf <exit> f#
+
+	*set xm <exit> misc#
+
+And keys are set using this syntax:  
+
+	*set xk <exit>  key#
+
+Note:  The key number is not the object number.  It is the ndice number.
+
+Example:		 *set xk 1225 25
+
+  This sets the key to lock/unlock the exit to room 1225 with a key with
+  25d0 as its code.

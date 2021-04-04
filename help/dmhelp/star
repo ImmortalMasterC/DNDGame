@@ -1,0 +1,16 @@
+DM *commands
+Many of these commands have options or require parameters.
+Type help *<command> to find the correct syntax and options.
+***********************************************************************
+*ac          *active    *add         *advance     *append      *attack     
+*balance     *bank      *broad       *charm       *cname       *create      
+*crtadd      *crtsave   *crttalk     *delete      *dmhelp      *dust        
+*echo        *enemy     *exp         *finger      *finger      *flushcrtobj 
+*flushrooms  *force     *gcast       *group       *info        *invisible   
+*inventory   *list      *lock        *log         *monster     *name        
+*notepad     *objadd    *objsave     *oname       *parameter   *password    
+*perm        *possess   *prepend     *purge       *quests      *reload      
+*replace     *save      *send        *set         *shutdown    *silence     
+*spells      *spy       *status      *teleport    *users
+***********************************************************************
+NOTE:   Eavesdrop function is not a *<command>.  Set the DM's flag #16.

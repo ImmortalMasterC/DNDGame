@@ -1,0 +1,7 @@
+	YELL <message>
+
+The yell command is similar to SAY except that people in rooms 
+adjacent to yours will also hear what you yelled.  People in your 
+room will know who yelled, but those in the adjacent rooms will 
+only identify you as "someone."
+

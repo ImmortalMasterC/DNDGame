@@ -1,0 +1,8 @@
+spell.50
+
+fear:
+This spell allows the caster to make another player or creature fearful,
+thereby causing it to flee sooner than it might otherwise, and also reducing
+its ability to attack.
+
+MP cost: 15		Syntax: cast fear <target>

@@ -1,0 +1,16 @@
+Notes concerning containers
+Never use part of the name of a container in the name of the key
+if the container can be fastened.
+For example, there is a mahogony chest in the Mercator attic, and
+when there was a mahognoy key, the command "use mah mah" always
+caused a crash.
+
+Containers are type 9 and also must have object flag 7 set.
+This seems inconsistent, but that's the way it is.
+
+When making a container, use shots to set how many item it may
+hold.  0/7 means it is empty and will hold seven items.
+
+Problem with fastened containers:  When the game resets after
+being down, a container always comes back unfastened.  Someday
+I will look at this problem.

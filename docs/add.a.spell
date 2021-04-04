@@ -1,0 +1,406 @@
+	ADDING A SPELL TO THE MORDOR GAME
+
+Maybe one of the easiest ways to show how to add a spell is
+to work through one.  Let's add the evil eye spell.  This
+spell has an effect on a player/monster it has been cast on, 
+but the effect is different depending on whether the player's
+alignment is good or evil.  For good players the evil eye spell
+will cause a slow down, but has the opposite effect on an evil
+player.  Thus, the spell is hurtful to good players, but beneficial
+to evil players.  The spell always slows down a monster.
+Other spells can be added in the same manner.
+
+Start with mtype.h
+There is a list of "last-time specifications" where we define
+a flag.  The purpose of this particular flag is to set the 
+amount of time the spell will last after it has been cast.
+Choose a five letter word, in capitals, to represent this
+function.  Let's use EVEYE.  At the bottom of the list of last-
+time specifications, add this new one.  make the flag number
+the next in sequence.  
+
+	#define  LT_EVEYE		43
+
+Now, at the bottom of the spells list, add this:
+
+	#define  SEVEYE			60
+
+We also need to have a flag for players and one for monsters.
+At the bottom of the player flags, put this:
+
+	#define  PEVEYE			55
+
+And again, at the bottom of the monster flags:
+
+	#define  MEVEYE			55
+
+If this spell is to one that can only be done a certain number
+of times per day, you need to define a Daily flag.  This is an
+example with the Dispel spell which can only be cast three times
+in one day.
+
+	#define DL_DISPL		11
+
+And you will need to have the daily flag initialized in player.c
+where there is list of other daily flags.
+
+	ply_ptr->daily[DL_DISPL].max = 3;
+
+---------------------------------------------------------------	
+
+
+Now we have all the flags defined, so it's time to add code in
+the appropiate mordor files.
+
+---------------------------------------------------------------------------
+
+The file global.c includes a spell list.  Add this line:
+
+->		{ "evil-eye", SEVEYE, evil_eye},	
+
+---------------------------------------------------------------------------
+
+Next is the combat file in the function attack_crt.
+There is an area where a player's attack interval is set.  
+We need to add some lines of code in this area. 
+ 
+    	ply_ptr->lasttime[LT_ATTCK].ltime = t;
+    	ply_ptr->lasttime[LT_ATTCK].interval = 3;
+    	if(F_ISSET(ply_ptr, PHASTE))
+    	    ply_ptr->lasttime[LT_ATTCK].interval = 2;
+		if(F_ISSET(ply_ptr, PBLIND))
+			ply_ptr->lasttime[LT_ATTCK].interval = 7;
+->		if(F_ISSET(ply_ptr, PEVEYE) && ply_ptr->alignment > 0)
+->			ply_ptr->lasttime[LT_ATTCK].interval = 5;
+->		if(F_ISSET(ply_ptr, PEVEYE) && ply_ptr->alignment < -250)
+->			ply_ptr->lasttime[LT_ATTCK].interval = 2;
+
+The first two lines will change the attack interval from the 
+standard three seconds to five seconds, but only if the player 
+has good alignment.  If the player has evil alignment, the spell
+acts like the HASTE command for rangers, decreasing the attack
+interval to only two seconds.
+
+Further down in the same function, there is a section where the
+player's thaco is compared to the armor class of the other player
+or monster that is being attacked.  The variable "n" is the difference
+between the two.  The evil eye spell will also have an effect here.
+
+    	n = ply_ptr->thaco - crt_ptr->armor/10;
+    
+    	if(F_ISSET(ply_ptr, PFEARS))
+			n += 2;
+
+    	if(F_ISSET(ply_ptr, PBLIND))
+			n += 5;
+
+->    	if(F_ISSET(ply_ptr, PEVEYE) && ply_ptr->alignment > 0)
+->			n += 5;
+->    	if(F_ISSET(ply_ptr, PEVEYE) && ply_ptr->alignment < -250)
+->			n -= 1;
+
+The change will cause the good aligned player to miss more often,
+and the evil player to hit more often.
+
+A little below this is an area where a paladin's damage is either
+increased or decreased depending on alignment.  That code is shown
+below so you can see where additional code is to be inserted
+
+
+	        if(ply_ptr->class == PALADIN) {
+	            if(ply_ptr->alignment < 0) {
+	                n /= 2;
+	                print(fd, "Your evilness reduces your damage.\n");
+	            }
+	            else if(ply_ptr->alignment > 250) {
+	                n += mrand(2,4);
+	                print(fd, "Your goodness increases your damage.\n");
+            }
+        }
+
+Immediately below this, insert the following:
+
+
+->		if(F_ISSET(ply_ptr, PEVEYE)) {
+->			if(ply_ptr->alignment > 0) {
+->				n -= mrand(2,4);
+->				if(n<1)
+->					n = 1; 
+->			} 
+->			if(ply_ptr->alignment < -250)
+->				n += mrand(2,4);
+->			print(fd, "The evil eye spell affects your ability to hit.\n");
+->		} 
+
+
+Now, one last bit of code to add near the end of the function.  This
+is the part of the code that says, "You missed" when you are fighting.
+Just prior to that, add the folling:
+
+->		else {
+->			if(F_ISSET(ply_ptr, PEVEYE) && ply_ptr->alignment > 0) { 
+->				ANSI(fd, YELLOW);
+->				print(fd, "The evil eye spell caused you to stumble and miss.\n");
+->				ANSI(fd, WHITE);
+->			} 
+			else
+				print(fd, "You missed.\n");
+			print(crt_ptr->fd, "%M missed.\n", ply_ptr);
+			if(ply_ptr->type == MONSTER && crt_ptr->type == MONSTER)
+				broadcast_rom2(fd, crt_ptr->fd, crt_ptr->rom_num, "%M missed %m.",
+					ply_ptr, crt_ptr);
+		}
+	
+    	return(0);
+	}
+
+---------------------------------------------------------------------------
+
+This next modification is in command4.c where the player can check 
+his/her score and determine "spells known" and "spells under."
+
+Add this line in two different places where there are lists of
+spells known and spells under:
+(It's easy to see where...  There's a long list of similar lines.)
+
+->		if(F_ISSET(ply_ptr, PEVEYE)) strcat(str, "evil-eye, ");
+
+
+
+---------------------------------------------------------------------------
+
+A similar line has to be added to dm2.c in the section where a DM
+can check the status of a player.  Again, it's easy to see where as
+there is a long list of similar lines.
+
+->		if(F_ISSET(crt_ptr, PEVEYE)) strcat(str, "Evil-eye, ");
+
+
+---------------------------------------------------------------------------
+
+This is the code that casts the spell.  It belongs in magic9.c, and
+it can be added at the very bottom of the file.
+
+ 
+/************************************************************************/
+/*							evil eye spell 								*/
+/************************************************************************/
+/* 	The reflection spell allows a player to cast an evil eye spell		*/
+/*  on another player or monster										*/
+
+int evil_eye(ply_ptr, cmnd, how)
+creature	*ply_ptr;
+cmd			*cmnd;
+int			how;
+
+{
+	creature	*crt_ptr;
+	room		*rom_ptr;
+	int			penalty, fd;
+
+
+	fd = ply_ptr->fd;
+	rom_ptr = ply_ptr->parent_rom;
+
+
+	if(ply_ptr->mpcur < 25 && how == CAST) {
+		print(fd, "Not enough magic points.\n");
+		return(0);
+	}
+
+	if(!S_ISSET(ply_ptr, SEVEYE) && how == CAST) {
+		print(fd, "You don't know that spell.\n");
+		return(0);
+	}
+
+	if(cmnd->num == 1 && !S_ISSET(ply_ptr, PCHAOS) && how == CAST) {
+		print(fd, "The spell cannot be cast on lawful members of society.\n");
+		return(0);
+	}
+
+	if(ply_ptr->alignment > 0 && how == CAST && ply_ptr->class < CARETAKER) {
+		ANSI(fd, YELLOW);
+		print(fd, "ZZzzz... POP!  The spell fails.\n");
+		ANSI(fd, WHITE);
+		print(fd, "Only those who are evil may cast this spell.\n");
+		print(fd, "You are surrounded by a dark and terrible smelling haze.\n");
+		ply_ptr->mpcur -= 25;
+		ply_ptr->alignment -= 50;
+		return(0);
+	}
+
+	if(cmnd->num == 2) {
+		ply_ptr->lasttime[LT_EVEYE].ltime = time(0);
+		F_SET(ply_ptr, PEVEYE);
+		broadcast_rom(fd, ply_ptr->rom_num, 
+			"The Unholy Goat peers at %M with an evil eye," 
+				" causing %s to tremble.\n", ply_ptr, 
+					F_ISSET(ply_ptr, PMALES) ? "him":"her");
+		if(how == CAST) {
+			print(fd, "You stagger as the evil eye of the Unholy Goat peers at you.\n");
+			ply_ptr->mpcur -= 25;
+			ply_ptr->lasttime[LT_EVEYE].interval = 300L;
+			ply_ptr->alignment -= 50;
+			compute_thaco(ply_ptr);
+			if(F_ISSET(ply_ptr->parent_rom, RPMEXT)) {
+        	    print(fd,"The room's magical properties increase the power "
+					"of your spell.\n");
+        	    ply_ptr->lasttime[LT_EVEYE].interval += 600L;
+        	}                                
+			else
+				ply_ptr->lasttime[LT_EVEYE].interval += 300L;
+		}
+		return(1);
+	}
+	else {
+		if(how == POTION) {
+			print(fd, "You can only use a potion on yourself.\n");
+			return(0);
+		}
+
+		cmnd->str[2][0] = up(cmnd->str[2][0]);
+		crt_ptr = find_crt(ply_ptr, rom_ptr->first_ply,
+			cmnd->str[2], cmnd->val[2]);
+
+		if(!crt_ptr) {
+			print(fd, "I don't see that person here.\n");
+			return(0);
+		}
+
+		if(how == POTION && ply_ptr->alignment > 0) {
+			ply_ptr->lasttime[LT_EVEYE].ltime = time(0);
+			F_SET(ply_ptr, PEVEYE);
+			print(fd, "An evil eye spell makes you feel quite clumsy and dizzy,\n");
+			print(fd, "and you start to stagger.\n");
+			ply_ptr->lasttime[LT_EVEYE].interval = 120L;
+			ply_ptr->alignment -= 50;
+			compute_thaco(ply_ptr);
+			if(F_ISSET(ply_ptr->parent_rom, RPMEXT)) {
+        	    print(fd,"The room's magical properties increase the power "
+					"of the potion.\n");
+        	    ply_ptr->lasttime[LT_EVEYE].interval += 300L;
+        	}                                
+			else
+				ply_ptr->lasttime[LT_EVEYE].interval += 180L;
+			return(0);
+		}
+
+
+		if(how == POTION && ply_ptr->alignment < 0) {
+			ply_ptr->lasttime[LT_EVEYE].ltime = time(0);
+			F_SET(ply_ptr, PBLESS);
+			print(fd, "An evil eye floats before your face.\n");
+			print(fd, "The Unholy Goat approves of your evil nature,\n");
+			print(fd, "and you feel his blessing flow over you.\n");
+			ply_ptr->lasttime[LT_BLESS].interval = 1200L;
+			ply_ptr->alignment -= 50;
+			compute_thaco(ply_ptr);
+			if(F_ISSET(ply_ptr->parent_rom, RPMEXT)) {
+        	    print(fd,"The room's magical properties increase the power "
+					"of the potion.\n");
+        	    ply_ptr->lasttime[LT_BLESS].interval += 1200L;
+        	}                                
+			else
+				ply_ptr->lasttime[LT_BLESS].interval += 300L;
+
+			return(0);
+		}
+
+		if(how == CAST && !F_ISSET(crt_ptr, PCHAOS) ||
+			!F_ISSET(ply_ptr, PCHAOS)) {
+				print(fd, "That spell can be cast only on the chaotic by the chaotic.\n");
+				return(0);
+		}
+
+		if(how == CAST) {
+			F_SET(crt_ptr, PEVEYE);
+			crt_ptr->lasttime[LT_EVEYE].ltime = time(0);
+			broadcast_rom2(fd, crt_ptr->fd, ply_ptr->rom_num, 
+				"%M calls upon the Unholy Goat to cast an evil eye spell on %m.",
+					ply_ptr, crt_ptr);
+			broadcast_rom2(fd, crt_ptr->fd, ply_ptr->rom_num, 
+				"%M staggers as the evil eye of Zeth stares briefly at %s.", 
+					crt_ptr, F_ISSET(crt_ptr, PMALES) ? "him":"her");
+			print(crt_ptr->fd, "%M casts an evil eye spell on you.\n", ply_ptr);
+			print(crt_ptr->fd, "You feel dizzy and clumsy, and start to stagger.\n");
+			print(fd, "You cast an evil eye spell on %m, causing %s to stagger.\n", 
+				crt_ptr, F_ISSET(crt_ptr, PMALES) ? "him":"her");
+			ply_ptr->mpcur -= 25;
+			ply_ptr->alignment -= 50;
+			compute_thaco(crt_ptr);
+			crt_ptr->lasttime[LT_EVEYE].interval = MAX(600, 120 +
+				bonus[ply_ptr->piety]*60);
+
+			if(F_ISSET(ply_ptr->parent_rom, RPMEXT)) {
+       		    print(fd, "The room's magical properties increase the power of your spell.\n");
+       		    crt_ptr->lasttime[LT_EVEYE].interval += 300L;
+       		}                                
+			else
+				crt_ptr->lasttime[LT_EVEYE].interval += 120L;
+		}
+
+		return(1);
+	}
+}
+
+ 
+---------------------------------------------------------------------------
+
+Almost done.  The next file that needs to be modified is player.c.  
+The function is update_ply
+
+This is where the last time variable is use used to cancel the spell 
+after a sufficient amount of time has past.
+
+It can be added anywhere in the updates which occur for such things as
+fly, invisible, pray, etc.  All of those look very similar to this:
+
+ 
+->	if(F_ISSET(ply_ptr, PEVEYE)) {
+->		if(t > LT(ply_ptr, LT_EVEYE)) {
+->			F_CLR(ply_ptr, PEVEYE);
+->			ANSI(ply_ptr->fd, YELLOW);
+->			print(ply_ptr->fd, "The evil-eye spell dissipates and you no ");
+->			print(ply_ptr->fd, "longer stagger like a drunken fool.\n");
+->			broadcast_rom(ply_ptr->fd, ply_ptr->rom_num,
+->			   "%M's evil-eye spell is gone.", ply_ptr);
+->			compute_thaco(ply_ptr);
+->			ANSI(ply_ptr->fd, BOLD);
+->			ANSI(ply_ptr->fd, WHITE);
+->  	}
+->  }
+
+
+---------------------------------------------------------------------------
+
+Another place in player.c there is a function called compute_thaco.  
+It needs to have these lines added near the end of the function:
+
+
+->	if(F_ISSET(ply_ptr, PEVEYE) && ply_ptr->alignment > 0)
+->			thaco += 5;
+->
+->	if(F_ISSET(ply_ptr, PEVEYE) && ply_ptr->alignment < -250)
+->		thaco -= 3;
+
+	ply_ptr->thaco = MAX(0, thaco);
+
+}
+
+---------------------------------------------------------------------------
+The last file that needs to be changed is creature.c
+This is only a one line change, and occurs in the function die.
+If a player dies, all flags are cleared.  Add this:
+
+
+        	F_CLR(crt_ptr, PPOISN);
+        	F_CLR(crt_ptr, PDISEA);
+        	F_CLR(crt_ptr, PCHARM);
+->        	F_CLR(crt_ptr, PEVEYE);
+
+---------------------------------------------------------------------------
+
+	DONE!!	congratulations.  I hope you made backup copies of
+         	all your files before you started these modifications...
+         	You know, just in case.   :)
+	-Styx-

@@ -1,0 +1,13 @@
+	TOUCH
+
+This function allows monks to kill non-undead creatures.
+If they succeed, then the creature is either killed or 
+harmed for approximately half of its hit points.  
+
+A monk must be at least level 7 to use this skill, and a
+neutral monk will not be able to use the touch of death
+at all.   
+
+Syntax:
+
+touch <target>

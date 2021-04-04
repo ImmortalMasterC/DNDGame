@@ -1,0 +1,9 @@
+
+	| For level two: 	Free. Proceed to the door.
+	| For level three:	alloy training key
+	| For level for:	plated training key
+	| For level five:	polished training key
+	| For level six:	gold training key
+	|
+	| To purchase a key:	purchase (keyname) hilda
+

@@ -1,0 +1,1 @@
+Never use <bits/string2.h> or <bits/string3.h> directly; include <string.h> instead.

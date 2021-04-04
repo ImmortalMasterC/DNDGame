@@ -1,0 +1,11 @@
+	   GO <exit/door> [#]
+	ENTER <exit/door> [#]
+	LEAVE <exit/door> [#]
+
+This command allows you to enter any non-standard exit like a "door" 
+or a "passage" which is a non-cardinal direction exit.
+
+Obvious exits: north, gravel path.
+:go gravel
+
+

@@ -1,0 +1,38 @@
+
+___________________________________________________________________________
+___________________________________________________________________________
+If you are new to the game, please type:  welcome
+You will see a helpful description of this Multi-User-Dungeon
+
+The code for this game was first written in 1991 and has been
+under constant construction since that time.
+
+LIST OF COMMANDS:
+attack        backstab     balance      bash        berserk      bludgeon
+borrow        bribed       broadcast    buy         cast         channelemote
+circle        clear_screen classemote   classsend   clear        climb
+close         club         consume      cost        cripple      deletemail
+deposit       description  discard      distract    drink        drop
+emote         equipment    fasten       finger      fix          flee
+follow        gaze         get          give        glow         go
+grab          group        grouptalk    gtalk       haste        health
+help          hide         hold         home        ignore       impale
+information   inventory    jimmy        kill        left         list
+lock          look         lose         newspaper   open         pay
+peek          pick         plead        pledge      pray         prepare
+purchase      push         quit         read        readmail     remove
+renew         repair       rescue       right       save         say
+score         search       selection    sell        send         sendmail
+set           show         slit         smash       snatch       sneak
+stab          steal        stealgold    study       suicide      talk
+teach         tell         time         track       trade        train
+transfer      transmute    turn         unfasten    unlock       use
+value         vote         wear         welcome     who          whois
+wield        withdraw      yell         zap
+
+NOTE:  Almost all commands can be abbreviated to one, two or three letters.       
+
+For specific information on a particular command, spell or social action, 
+type:   welcome      help spells         help smile        help <command>
+___________________________________________________________________________
+___________________________________________________________________________

@@ -1,0 +1,15 @@
+spell.60
+
+evil-eye:
+	This command allows you to cast an evil-eye spell on yourself
+or another player.  If cast on another player, both the caster and
+and the target must be chaotic.  If cast on one's self, the result
+is different depending on your alignment.  If you are evil, the spell
+will increase your ability to hit.  (You won't miss as often.) 
+However, if you are good, it will have the opposite affect, and you
+will miss your opponent much more often.  The spell may be removed 
+from yourself with a bless spell.  If the evil-eye spell is cast on
+another chaotic player, the target will be clumsy and will often miss
+his/her opponent during battle. It also slows you down. 
+
+MP cost: 25 		Syntax: cast evil-eye <target>

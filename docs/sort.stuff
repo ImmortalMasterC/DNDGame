@@ -1,0 +1,34 @@
+Many of the files have lists that should be sorted in alphabetical order.  
+One that comes to mind is the one players see when they type:  help smile.  
+Here's an easy way to sort all those commands.
+
+1.	Go to the help directory and make a backup copy
+	of help.100.
+		cp help.100 help.100.bak
+
+2.	Now make another copy of the file - any name is ok.
+	For this example, it is HELP.
+		cp help.100 HELP
+
+3.	Start your favorite editor with this new copy.  I use vi.
+		vi HELP
+
+4.	Strip out all the sentences and text except for the list of
+	words to be sorted.  Also, put each word on a separate line.
+	save the file and exit the editor. 	
+
+5.	Invoke the unix sort command and create a new file with the
+	words in alphabetical order.  The new file name can be anything,
+	but in this example it is LIST.
+		sort HELP -o LIST
+
+6.	Start the editor again, this time with help.100
+		vi help.100
+
+7.	Strip out the unsorted list of words.  After they are eliminated,
+	import the text file LIST.
+
+8.	Remove the backup file.  Done.
+
+	-Styx-
+--------------------------------------------------------------------------	

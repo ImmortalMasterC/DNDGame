@@ -1,0 +1,152 @@
+/***********************************************************************/
+/*							touch_of_death						       */
+/***********************************************************************/
+/* This function allows monks to kill non-undead creatures.            */
+/* If they succeed, then the creature is either killed or harmed       */
+/* for approximately half of its hit points.			       		   */
+
+int touch_of_death(ply_ptr, cmnd)
+creature	*ply_ptr;
+cmd			*cmnd;
+
+{
+	creature	*crt_ptr;
+	room		*rom_ptr;
+	long		i, t;
+	int			chance, m, dmg, fd;
+
+	fd = ply_ptr->fd;
+	rom_ptr = ply_ptr->parent_rom;
+
+	if(cmnd->num < 2) {
+		print(fd, "Touch whom?\n");
+		return(0);
+	}
+
+	if(ply_ptr->class != MONK && ply_ptr->class < CARETAKER) {
+		print(fd, "Only monks may use that skill.\n");
+		return(0);
+	}
+
+	if(ply_ptr->level < 7) {
+		print(fd, "You are not experienced enough to do that.\n");
+		return(0);
+	}
+
+	if(ply_ptr->ready[WIELD - 1]){
+		print(fd, "Your hands are full.  How can you do that?\n");
+		return(0);
+	}
+	crt_ptr = find_crt(ply_ptr, rom_ptr->first_mon,
+		cmnd->str[1], cmnd->val[1]);
+
+	if(!crt_ptr) {
+		cmnd->str[1][0] = up(cmnd->str[1][0]);
+		crt_ptr = find_crt(ply_ptr, rom_ptr->first_ply,
+			 cmnd->str[1], cmnd->val[1]);
+				if(!crt_ptr) {
+					print(fd, "They aren't here.\n");
+					return(0);
+				}
+	}
+	if((!F_ISSET(ply_ptr,PPLDGK) || !F_ISSET(crt_ptr,PPLDGK)) || 
+		(BOOL(F_ISSET(ply_ptr, PKNGDM)) == BOOL (F_ISSET(crt_ptr, PKNGDM))) || 
+			(!AT_WAR)) {
+                if(!F_ISSET(ply_ptr, PCHAOS) && crt_ptr->type != MONSTER && 
+					ply_ptr->class < DM) {
+                    	print(fd, "Sorry, you're lawful.\n");
+                    	return (0);
+                }
+                if(!F_ISSET(crt_ptr, PCHAOS) && ply_ptr->class < DM && 
+					crt_ptr->type != MONSTER) {
+                    	print(fd, "Sorry, that player is lawful.\n");
+                    	return (0);
+                }
+	}
+
+	if(F_ISSET(ply_ptr, PBLIND)) {
+		print(fd, "How do you do that?  You're blind.\n");
+		return(0);
+	}
+
+	if(F_ISSET(rom_ptr, RNOKIL) && ply_ptr->class < DM) {
+		print(fd, "Not here.\n");
+		return(0);
+	}
+	
+	if(F_ISSET(crt_ptr, MUNDED) && crt_ptr->type == MONSTER) {
+		print(fd, "That won't work on the undead.\n");
+		add_enm_crt(ply_ptr->name, crt_ptr);		
+		return(0);
+	}
+
+	if(F_ISSET(ply_ptr, PINVIS)) {
+		F_CLR(ply_ptr, PINVIS);
+		ANSI(fd, MAGENTA);
+		print(fd, "Your invisibility fades.\n");
+		ANSI(fd, BOLD);
+		ANSI(fd, WHITE);
+		broadcast_rom(fd, ply_ptr->rom_num, "%M fades into view.", ply_ptr);
+	}
+
+	i = ply_ptr->lasttime[LT_TOUCH].ltime;
+        t = time(0);
+
+	if((t - i) < 600L) {
+		print(fd, "Please wait %d:%02d more minutes.\n",
+			(600L - t + i)/60L, (600L - t + i)%60L);
+		return(0);
+	}
+
+	if(crt_ptr->type != PLAYER && F_ISSET(crt_ptr, MUNKIL)) {
+		print(fd, "No one can harm %s.\n",
+			F_ISSET(crt_ptr, MMALES) ? "him":"her");
+		return(0);
+	}
+	
+	if(crt_ptr->type == MONSTER)
+		add_enm_crt(ply_ptr->name, crt_ptr);
+
+	ply_ptr->lasttime[LT_TOUCH].ltime = t;
+	ply_ptr->lasttime[LT_ATTCK].ltime = t;
+	ply_ptr->lasttime[LT_TOUCH].interval = 600L;
+
+	chance = (ply_ptr->level - crt_ptr->level) * 20 
+		+ bonus[ply_ptr->constitution] * 10;
+	if(chance < 0)
+		chance = 0;
+	chance = MIN(chance, 85);
+
+	if(mrand(1, 100) > chance) {
+		print(fd, "You failed to harm %m.\n", crt_ptr);
+		broadcast_rom(fd, ply_ptr->rom_num, 
+			"%M failed the touch of death on %m.\n", ply_ptr, crt_ptr);
+		return(0);
+	}
+
+	if((mrand(1, 100) > 80 - bonus[ply_ptr->constitution]) && 
+		crt_ptr->type == MONSTER && !F_ISSET(crt_ptr, MPERMT)) {
+			print(fd, "You fatally wound  %m.\n", crt_ptr);
+			broadcast_rom(fd, ply_ptr->rom_num, 
+				"%M fatally wounds %m.", ply_ptr, crt_ptr);
+			add_enm_dmg(ply_ptr->name, crt_ptr, crt_ptr->hpcur);
+			die(crt_ptr, ply_ptr);	
+	}
+	else {
+		dmg = MAX(1, crt_ptr->hpcur/2);
+		m = MIN(crt_ptr->hpcur, dmg);
+		crt_ptr->hpcur -= dmg;
+		add_enm_dmg(ply_ptr->name, crt_ptr, m);
+		print(fd, "You touched %m for %d damage.\n", crt_ptr, dmg);
+		broadcast_rom(fd, ply_ptr->rom_num, 
+			"%M uses the touch of death on %m.", ply_ptr, crt_ptr);
+	    if(crt_ptr->hpcur < 1) {
+			print(fd, "You killed %m.\n", crt_ptr);
+			broadcast_rom(fd, ply_ptr->rom_num, "%M killed %m.", 
+				ply_ptr, crt_ptr);
+			die(crt_ptr, ply_ptr);
+		}
+	}
+
+	return(0);
+}

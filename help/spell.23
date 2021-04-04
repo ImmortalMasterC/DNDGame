@@ -1,0 +1,7 @@
+spell.23
+
+fly:   
+This spell allows a player to fly.
+It can be canceled with the 'land' command at no MP cost.
+
+MP cost: 15 		Syntax: cast fly <target>

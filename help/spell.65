@@ -1,0 +1,10 @@
+spell.65
+
+knock
+Bards have a special talent and may use the knock spell to
+open locked doors.  The spell has a high rate of failure,
+however, depending on the bard's level, luck and dexterity.
+
+MP cost: 12      Syntax: cast knock <exit>
+~
+

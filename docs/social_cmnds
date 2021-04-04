@@ -1,0 +1,40 @@
+	How to Add a Social Command
+
+So you have discovered a neato social command that was left out
+of the Mordor code, and want to make your contribution, eh?
+Well, this is how you do it.  We are going to add the "salute"
+command.
+
+In global.c you will find a list of all the social commands.  They
+look like this:
+	{ "dance", 100, action },
+
+duplicate this line with your new command and add it to the list.
+	{ "salute", 100, action },
+
+Now open the file action.c and see the syntax for each action command.
+Note that some social actions do not need a target, but that others do.
+(You can dance by yourself, but you need someone to goose.)  The action
+we are adding, salute, could be either.  Let's require a target.
+
+At the end of the file, add these lines:
+ 
+	else if(!strcmp(cmdlist[cmdno].cmdstr, "salute")) {
+		if(crt_ptr) {
+			OUT4("You salute %m.\n", 
+			     "%M stands and salutes you.\n",
+			     "%M stands and salutes %m.");
+		}
+		else
+			print(fd, "salute whom?\n");
+	}
+
+The last thing you have to do is add the new command to the help file.
+Change to the help directory and open the help.100 file.  You will find
+a list of all social commands possible.  Insert the word salute.
+
+You're done.  Easy, wasn't it?
+
+	-Styx-
+-----------------------------------------------------------------------
+

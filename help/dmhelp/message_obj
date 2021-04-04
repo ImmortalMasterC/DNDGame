@@ -1,0 +1,48 @@
+
+Message From an Object
+
+All objects can be given an output string of text that
+is seen when the object is used or held.  Occasionally
+you might want that output string to serve perhaps as
+a quest clue, and you only want it to be displayed when
+the player is in a certain room and holds the object.  
+Let's call the room the convergence room.  It might also 
+be used as a maze guide, telling the direction to go only 
+when it is held in the convergence room.
+
+This is what you need to do:
+
+OBJECT
+Create an object with the desired output string.
+Set the object special = 5.
+Set wear to 17, which is hold.
+Set the shots.  When the object has been used in the
+convergence room equal to the number of shots, it
+disintegrates to gray dust.  Of course, you could set
+the flag for never used up (flag 52) if you don't want 
+a limited number of uses.  
+
+
+ROOM
+You will need two rooms with consective room numbers.
+The higher numbered room is a storage room where you
+must place a permanent copy of the object you have
+created.  
+
+Be sure to set flags 1 and 10, drop the object on the 
+floor, and type *perm
+You should get a message that says, done.
+
+Also, be sure players cannot teleport to this room.
+Set room flags:
+	13 (cannot teleport)
+	34 (cannot login)
+and	39 (cannot use as a home room)
+
+The lowered number room is the convergence room where
+you want the player to be when he holds the object.  
+The only thing you need to do here is set the room special 
+to 5.
+
+*set r spec 5
+

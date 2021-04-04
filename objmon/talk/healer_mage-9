@@ -1,0 +1,65 @@
+spells ACTION tap
+I can cast several of the curing or healing spells.  Which one would you like?
+spell
+I can know several different healing spells, and a few others, too.
+healing
+yes, I can heal you if you tell me which spell you desire.  I know vigor, heal and mend-wounds.  I can also cure afflictions.
+heal CAST heal
+that's my speciality.
+cast ACTION tap
+I can cast cure or healing spells of all sorts.  Which would you like?
+cure ACTION tap
+I can cure disease, blindness, silence or poison.  Which do you need?
+mend-w CAST mend-wounds 
+that should perk you up.
+mend-wounds CAST mend-wounds
+that should perk you up.
+mend CAST mend-wounds
+that should perk you up.
+vigor CAST vigor
+that should raise your enthusiasm.
+vig CAST vigor
+that will put lead back in your pencil.
+cure-poison CAST cure-poison
+you got here just in time.  Another few minutes and you would be in Limbo.
+cure-p CAST cure-poison
+you got here just in time.  Another few minutes and you would be in Limbo.
+poison CAST cure-poison
+you got here just in time.  Another few minutes and you would be in Limbo.
+cure-disease CAST cure-disease
+uhhh, there's really no need to shake my hand.  PLEASE don't touch me.
+dis CAST cure-disease
+uhhh, there's really no need to shake my hand.  PLEASE don't touch me.
+disease CAST cure-disease
+uhhh, there's really no need to shake my hand.  PLEASE don't touch me.
+cure-d CAST cure-disease
+uhhh, there's really no need to shake my hand.  PLEASE don't touch me.
+cure-bli CAST cure-blindness
+open your eyes.  You can see.
+cure-blind CAST cure-blindness
+open your eyes.  You can see.
+cure-blindness CAST cure-blindness
+open your eyes.  You can see.
+bli CAST cure-blindness
+open your eyes.  You can see.
+blind CAST cure-blindness
+you may open your eyes, now.
+blindness CAST cure-blindness
+you may open your eyes, now.
+super-strength CAST vigor
+I've decided not to cast that anymore.  It's not really good for your health.
+remove-silence CAST remove-silence
+I heard your thoughts, so now you may speak, but watch your tongue.
+remove-sil CAST remove-silence
+I heard your thoughts, so now you may speak, but watch your tongue.
+sil CAST remove-silence
+I heard your thoughts, so now you may speak, but watch your tongue.
+silence CAST remove-silence
+I heard your thoughts, so now you may speak, but watch your tongue.
+cure-silence
+I'm sorry, but do you mean remove silence?
+cure-sil
+I'm sorry, but do you mean remove silence?
+flu
+Take two aspirin and call me in the morning.  That's the best I can do.
+

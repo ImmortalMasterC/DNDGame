@@ -1,0 +1,71 @@
+
+Shown below are the steps needed to add a new exit flag to the 
+game code.  
+Generally, this is how you would add almost any new exit flag.
+This particular one is used to exclude evil players from going
+through certain exits.  It might be used to keep evil paladins
+from going through the temple to train.
+
+
+EXAMPLE:
+
+Add this line to the mtype.h file, but you will probably change
+the flag number to the next one in sequence.
+
+#define XNOEVL		58	/* Evil players cannot use exit	 */
+
+
+Next, add this line to dm2.c for DM exit descriptions:
+
+		if(F_ISSET(ext, XNOEVL)) strcat(str, "NoEvil, ");
+
+
+Now you have to add code to three different command files.
+Note the difference in how the exit pointer is called in the first line
+for command2.c and the other two command files.
+
+Add this to command2.c
+
+if(F_ISSET(xp->ext, XNOEVL)) {
+    if(!F_ISSET(xp->ext, XNOEVL + (ply_ptr->alignment < -100))) {
+      print(fd, "A ward of Goodness protects that exit.  ");
+      print(fd, "Begone, foul and evil creature!\n");
+      return(0);
+    }
+}
+if(F_ISSET(xp->ext, XNOEVL)) {
+    if(!F_ISSET(xp->ext, XNOEVL + (ply_ptr->alignment > B-100))) {
+      print(fd, "You pass through a portal protected by a ward of Goodness.\n");
+    }
+}
+
+
+
+This goes in command6.c
+
+if(F_ISSET(ext_ptr, XNOEVL)) {
+    if(!F_ISSET(ext_ptr, XNOEVL + (ply_ptr->alignment < -100))) {
+      print(fd, "A ward of Goodness protects that exit.  ");
+      print(fd, "Begone, foul and evil creature!\n");
+      return(0);
+    }
+}
+if(F_ISSET(ext_ptr, XNOEVL)) {
+    if(!F_ISSET(ext_ptr, XNOEVL + (ply_ptr->alignment > -100))) {
+      print(fd, "You pass through a portal protected by a ward of Goodness.\n");
+    }
+}
+
+
+
+
+and finally, add this to command10.c
+
+if(F_ISSET(ext_ptr, XNOEVL)) {
+    if(!F_ISSET(ext_ptr, XNOEVL + (ply_ptr->alignment < -100))) {
+      print(fd, "You cannot sneak through an exit protected ");
+      print(fd, "by a ward of Goodness.\n");
+      print(fd, "Begone, foul and evil creature!\n");
+      return(0);
+    }
+}

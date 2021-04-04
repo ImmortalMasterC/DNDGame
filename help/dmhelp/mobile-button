@@ -1,0 +1,42 @@
+THE MOBILE PUSH-BUTTON
+
+The traditional means for making a combination lock call for 
+creating one or more buttons with the following properties:
+Set hitroll to  0DX + Y 
+(where X = the value of that button and Y = the exit number to 
+be targeted with the push button if the sequence is successful).
+Additionally, the button is to be set as type: 13 and special: 2
+Finally, the output value is to be a numeric code representing 
+the correct order in which buttons are to be pressed.
+
+For example, there is a place in Darbonne where the CHIMNEY can
+be pushed and it opens up a secret hole:
+set hitroll to: 0d1 + 2 , output =1, type = 13, special = 2
+In the room with the chimney, There is only ONE obvious exit. 
+The second exit is the hole to be opened, and it is hidden.
+(corresponding with the +2 on the hitroll).
+
+The concept of the pushbutton can be expanded to include MOBILE
+pushbuttons.  Take the case of the bucanneer's spade which is 
+item No. 734.  The bucaneer's spade is set as a button, with the 
+hitroll 0d1 +10 .  The +10 is the element which allows it to be 
+mobile, because very few rooms in mordor have more than six exits, 
+and this spade will only open exit #10.
+Creatively, this now means we have a tool which can open up areas 
+in which it is sensible to use it.
+
+Since a spade is in fact a shovel, we can create areas in which 
+it makes sense to have a shovel, such as a buried treasure room, 
+or an area in the snow to be excavated.  Such rooms would need to 
+have "filler" exits, so that a valid tenth exit can be added, 
+targeted by the mobile button.  
+
+Example
+Room 4916: Island of Anglessey:
+Obvious exits: west, south
+No-print exits: soa, sob, soc, sod, soe, sof, sog, sand_stairs
+The sandstairs exit is #10, and has flags 3-7 so the exit cannot 
+be picked.  The exits before it point to the same room as does 
+the "south" exit.
+
+Voila, we have a mobile pushbutton!

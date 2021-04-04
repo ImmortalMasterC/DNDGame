@@ -1,0 +1,63 @@
+/* Player flags */
+PBLESS          1       Bless spell 
+PHIDDN          2       Hidden 
+PINVIS          3       Invisible 
+PNOBRD          4       Don't show broadcasts 
+PNOLDS          5       Don't show long description 
+PFROZE          6       Frozen
+PHEXED          7       Hex spell
+PASSHL          8       Player is an asshole
+PPROTE          9       Protection spell 
+PAUTOA          10      Auto-attack for player 
+PDMINV          11      DM Invisibility 
+PNOFOL          12      Player does not allow following
+PMALES          13      Sex == male 
+PNOCOP          14      No copulation
+PWIMPY          15      Wimpy mode 
+PEAVES          16      Eavesdropping mode 
+PPOISN          17      Poisoned 
+PLIGHT          18      Player has light 
+PPROMP          19      Display status prompt 
+PHASTE          20      Haste flag (for rangers) 
+PDMAGI          21      Detect magic 
+PDINVI          22      Detect invisible 
+PPRAYD          23      Prayer activated 
+PLOANB          24      Has a bank loan
+PPREPA          25      Prepared for trap 
+PLEVIT          26      Levitation 
+PANSIC          27      Ansi color 
+PSPYON          28      Spying on someone 
+PCHAOS          29      Chaotic  !Lawful 
+PREADI          30      Reading a file 
+PRFIRE          31      Resist fire spells
+PFLYSP          32      Flying 
+PRMAGI          33      Resist magic 
+PKNOWA          34      Know alignment 
+PNOSUM          35      Nosummon flag 
+PIGNOR          36      Ignore all send  
+PRCOLD          37      Resist-cold  
+PBRWAT          38      Breathe water 
+PSSHLD          39      Resist-earth spells 
+PPLDGK          40      Player pledge to a prince 
+PKNGDM          41      Pledge to prince 0/1	0=Ragnar, 1=Rutger 
+PDISEA          42      Diseased 
+PBLIND          43      Blind 
+PFEARS          44      Fearful 
+PSILNC          45      Silenced 
+PCHARM	        46      Charmed
+PNLOGN	        47      Disable login broadcast message
+PLECHO	        48      Local echo mode enabled
+PSECOK	        49      Player has passed security check 
+PAUTHD	        50      Authorized No-Port
+PALIAS	        51      DM is Aliasing
+PSTRNG	        52      Super strength
+PSHRNK	        53      Shrunk to mouse size
+PRFLCT	        54      Protected by Reflect spell
+PDETLK	        55      Can detect luck
+PEVEYE	        56      Suffers from evil eye
+PLOANU	        57      Bank loan has already been used
+PSPLIT	        58      Autosplit gold with group
+PNUMBS	        59      Numb
+PCLOAK	        60      Player is cloaked
+
+

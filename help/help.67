@@ -1,0 +1,6 @@
+	USE <item> <target>
+
+This command allows you to use different items.  If no target is 
+given, it is assumed that you want to use it yourself.  However, 
+be careful about using some items on yourself as it can be very 
+dangerous.

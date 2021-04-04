@@ -1,0 +1,7 @@
+spell.51
+
+room vigor:   
+A vigor spell is cast on everyone in the room.  No target is required.
+Only clerics may cast this spell.
+
+MP cost: 8		 Syntax:  cast room-vigor

@@ -1,0 +1,8 @@
+
+	HOW TO CHANGE THE AGE OF A PLAYER
+
+	Invoke the mud editor and select "Player" from the first menu.  
+	Choose number 10, marked, "Edit 2nd page of last-time"
+	Flag number 29 is used to change a player's age.
+	A value of 10,000,000 is approximately equal to 133 years old.
+

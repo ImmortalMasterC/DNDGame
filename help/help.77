@@ -1,0 +1,8 @@
+	SUICIDE
+
+This command allows your player to commit suicide.  When you commit 
+suicide, your entire player file is erased including anything that 
+was being carryed.  You will be prompted to confirm your choice when 
+you attempt to suicide.  Any character that is suicided cannot and 
+will not be restored.
+

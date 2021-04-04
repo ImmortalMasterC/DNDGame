@@ -1,0 +1,7 @@
+spell.53
+
+cause-blindness:
+This spell causes the target player or creature to become blind.
+
+MP cost: 25 		Syntax: cast blind <target>
+

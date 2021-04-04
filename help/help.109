@@ -1,0 +1,9 @@
+help.109
+
+	*Purge
+
+	This function alllows the DM to clear the current room of all 
+monsters and objects.  Players are unaffected.  This is not a permanent
+purge and random monsters will continue to appear.  Permanent monsters
+and permanent objects will not reappear until after the room has been 
+vacated.

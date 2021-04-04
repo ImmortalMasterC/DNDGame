@@ -1,0 +1,9 @@
+	RENEW  <object>  [#]
+
+Some weapons are made of enchanted silver, which does particular
+damage to the undead.  Because regular blacksmiths cannot repair
+such weapons they must be renewed by a silversmith in a silver shop.  
+For a hefty fee they are renewed to 90 percent of their original 
+strength.  You can determine the fee before having the object 
+renewed by using the COST command.  RENEW restores both the condition
+of the weapon as well as the glow of its enchanted silver.

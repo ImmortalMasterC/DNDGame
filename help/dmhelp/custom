@@ -1,0 +1,46 @@
+If you want to make personalized items for a player, this is the way
+to do it.  Custom items such as these tend to make the game more fun
+for the player and the DM/CT is encouraged to put them into the game.
+Some muds charge outrageous fees, but on Darbonne they can be done for 
+free, if the player is deserving.  i.e, helps newbies, reports bugs, etc.
+
+The following are generic items already in the database to help with
+the process, and if you use them you can also change any flags that
+might be set.  
+
+No.   Item	       Wgt Type Adj  Shot   Dice      AC   Wear
+
+1000. parry             4   5        100    0d0 +0     5    17
+1001. armor            18   5   +1   100    0d0 +0    11     1
+1002. sleeves           8   5        100    0d0 +0     8     2
+1003. legging           8   5        100    0d0 +0     8     3
+1004. helm              5   5        100    0d0 +0    10     7
+1005. ring              1   5        500    0d0 +0     0     9
+1006. neckwear          2   5        100    0d0 +0     3     4
+1007. shield           15   5        100    0d0 +0    10    18
+1008. boots             8   5        100    0d0 +0     7     8
+1009. gloves            6   5        100    0d0 +0     7     6
+1010. sharp weapon      5   0   +3   150    3d4 +4     0    20
+1011. thrust weapon     5   0   +3   150    3d4 +4     0    20
+1012. blunt weapon      5   0   +3   150    3d4 +4     0    20
+1013. pole weapon       5   0   +3   150    3d4 +4     0    20
+1014. missle weapon     5   0   +3   150    3d4 +4     0    20
+1015. key               1  11          1    0d0 +0     0    17  
+
+     *oname <generic item>  [#]  [-d|-o|-k#]  <new description>
+
+				 -d = description of item
+				 -o = output string
+				-k# = key name
+
+EXAMPLE
+Make a cape with an insignia on it for Jojo.
+It will be a green rangers cape with the letter J on it.
+
+1.  *c 1006
+2.  *oname neckwear green rangers cape
+3.  *oname -k1 rangers
+4.  *oname -k2 cape
+5.  *oname -d It's the cape of a ranger captain.  It has a letter J on it.
+6.  *oname -o The cape envelopes you in shadow.
+

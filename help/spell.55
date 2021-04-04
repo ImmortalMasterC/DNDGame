@@ -1,0 +1,7 @@
+spell.55
+
+remove-silence:
+This spell removes the silence affliction from a player.  
+It can only be cast by either a cleric or a paladin.
+
+MP cost: 12		Syntax: cast remove-silence <target>

@@ -1,0 +1,4 @@
+Set the exit's XBRIBE flag:              *set xf <ext.name> 63
+Set the amount of bribe to enter:        *set xm <ext.name> <amount>
+Set the guard monster's XPGUAR flag:     *set m <crt.name> f 34
+Voila!

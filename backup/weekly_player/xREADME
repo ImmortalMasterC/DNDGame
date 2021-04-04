@@ -1,0 +1,5 @@
+
+	tdel <number of days> displays player names that have not
+	logged in for at least <number of days>
+
+

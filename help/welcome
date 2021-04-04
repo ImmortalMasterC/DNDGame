@@ -1,0 +1,165 @@
+
+Darbonne, the Floating City
+
+Scenarios created by Styx, the Dungeonmaster. 
+
+****************************************************************************
+   NOTE: It is recommended that players read this file in its entirety.
+	 You may refer to it at any time by simply typing welcome. 
+****************************************************************************
+
+INTRODUCTION
+	Darbonne is a MUD (Multi-User Dungeon) based on the Mordor code
+written by Brett Vickers, with extensions by Steve Smith and Brooke Paul,
+Roy Wilson and many others.  It is a real time game in which you can 
+interact with other players.   The following is a brief explanation of 
+important commands and topics needed to enjoy this game.  Some commands 
+have multiple equivalents and they will be listed with commas separating 
+them.  Variable arguments will be listed via <argument>, but you should 
+not type the <> brackets.  
+
+COMMAND LINE
+	The game is command line driven, with a colon as its normal prompt.  
+The command interpreter is an intelligent one.  Commands may be given in 
+upper and/or lowercase letters.  An abbreviation of a command and its 
+arguments may be used.  If the abbreviation is not a unique command, more 
+information (letters) must be typed.
+
+HELP
+	Online help can be summoned by issuing the command 'help <command>'.  
+If a command argument is given, specific information on that argument will 
+be listed, otherwise all the available commands will be listed.
+
+COMMUNICATION
+	Since Darbonne is a multi-user game, there needs to be some way
+to talk to other players.  If you wish to see who is currently logged on,
+type the word "who."  The following commands are used for communication:
+
+	To talk to all of the players in the same room, there are three
+different methods:  Choose the one you are most comfortable with.  You may
+type the word "say" followed by your <message>, or you can use either a
+single quote or a double quote followed by your <message>.
+
+	If you type the word "yell" followed by your <message> the message 
+will be sent to all the players in the same room and adjoining rooms.
+
+	If you type the word "tell" or the word "send" followed by the
+arguments <player> <message>,  the message will be sent to only the 
+specific player identified.  The target player does not have to be in the
+same room with you.
+
+	You can broadcast a message to the entire game and all players
+currently logged on.  Type the word "broadcast" followed by <message>. 
+A five broadcast per day quota is imposed on each character.  There is
+also a global emote command.  Use channelemote <message>.
+
+	If you are a member of a group, you can use grouptalk <message>,
+ which allows you to address your remarks to the entire group of adventurers.
+
+	There is a classsend command, which allows you to communicate with
+other players of the same class, such as thief, mage, etc.  You can also use
+classemote <message> for emote messages to members of your class.
+
+	Please try to refrain from profanity, as young children have access  
+to our game.  (Too much profanity, and you will piss off the Dungeon Master.)
+
+MOVEMENT
+	To move from one place to another, you may use the "go" command,
+or simply type the direction itself.
+Direction is any valid exit from the current room, which may be visible, 
+hidden, or invisible.  Examples are "go temple", "go pub", "go door".
+	Instead of typing "go <direction>" all the time, certain directions 
+may be given as the command itself.  These command directions include "north", 
+"south", "east", "west", "northwest", "northeast", "southwest", "southeast", 
+"left", "right", "forward", "back", "up", "down" and "out."  One or two letters
+of each of these command directions may be used as a special abbreviation.  
+For example, use "n" instead of "north" (or instead of "go north") and "ne" 
+instead of "northeast".
+
+INVENTORY/OBJECTS
+	Each character is able to carry a limited amount of weight.
+Objects in the game include weapons, armor, scrolls, potions, gold, torches,
+keys, and other items.  Each item (except gold) has a specific weight value.  
+A character may not carry more than he/she can handle, which depends on 
+his/her class, strength, and level.  Unlike other MUD's, you will retain all 
+of your inventory each time you log on/off.
+	Type the word "inventory" to list all items currently in your 
+character's possession, but not worn, held, or wielded.  You may abbreviate
+with just the letter 'i'.
+	If you type the word "equipment", it will list all items currently 
+worn, held, or wielded.  You can abbreviate with 'equi'.
+	You will often want to get items you see that have been dropped.
+Use the command  "get <item> [#] [from] [<item2>] [#]".
+Example no. 1:  get sword  (get the first sword on the floor and add it
+	to your inventory.  If you want to use it, be sure to WIELD it.)
+Example no. 2: get mace 2  (If there are two maces on the floor, this command
+	allows you to get the second one.)
+Example no. 3:  get mask from bag  (If you previously put the mask in a bag
+	you can retrieve it.  Note the word 'from' is not really necessary.)
+IMPORTANT: Refer to objects with only one name.  For example, if you
+wish to get some cloth armor, type "get armor" or "get cloth".  (either
+will work.)   Do not type "get cloth armor" because the code will consider 
+the armor as a container from which you want to get cloth.
+	You may "drop" <item> which will remove the <item> from the your
+inventory and place it on the floor in the current room.  You can also
+drop all.
+	Armor: an object which is worn on a specific part of a character's 
+body which contributes towards Armor Class (AC) value. Low numbers are best. 
+"wear <item>" will attempt to wear a specific item, and will succeed if it
+is an armor item and no other item is worn in its spot. Also, the item must
+not be broken.  "wear all" is a shortcut which attempts to wear all the items 
+in your inventory.  (in the order that they appear).
+*
+*
+*
+*
+*** HINTS FOR THE NEW PLAYER
+	There are several recommendations for a new player:
+
+	1. You may want to suicide your character and start over after you
+read the Book of Knowledge.  The book contains helpful information concerning
+the best classes, races and stats for a new character.  Also, your first 
+character should be made Lawful.  Darbonne can be a violent place for the 
+chaotic player, and it is best to become famililar with the game and its 
+commands before attempting to challenge other players.
+	2. Use the _set_ command to set some of your character's parameters. 
+These parameters, and their current settings, can be found by typing 'set' 
+and 'help set' at the command prompt.
+	3. When encountering a new monster, be sure to _look_ at it 
+before anything else (unless it is attacking you).  At the lower levels 
+there are very few monsters that will attack you first, so it is usually 
+safe to 'look' at them.  The information you gain from looking will tell 
+you if the monster is an opponent that you can handle.  It will also let 
+you know if it is a good idea to talk to them.  Many of the monsters can 
+talk interactively and will provide vital information about the game.  
+Some will attack you if you talk to them so you need to look first and 
+then decide if it is safe to talk.
+	4.  The information you gain from reading the full room descriptions 
+will save you much grief and time.  After you pass level 3, you may elect
+too 'clear long' if you no longer wish the long room descriptions to be
+displayed.  However, if you go into a new area, be sure to 'set long' again.
+	
+		*** HINTS TO GET TO LEVEL 2 ***
+NOTE: You must get to level two within a month or so in order for the 
+character to be saved permanently.
+
+	Low level players should not attempt areas outside Darbonne until at
+least level 4 or by grouping with other players.  Attack easy monsters
+such as students, scribes, monks, merchants, laborers, and vagrants.  This
+can be accomplished by just hanging out at the park or pubs. It's not 
+recommended that you attack without full hitpoints.  Remember that you must 
+constantly attack with "k <monster>" every 3 seconds or so.  Monsters will 
+remember their enemies, so if you attack one and flee (in which case you 
+drop your wielded weapon), it will attack you if you come back to that place.  
+A good strategy as a level 1 player is to not worry about getting killed,
+but to use your time to explore and become familiar with the city.  
+The general rule is _look_ and _talk_ before attacking, and above all: 
+BE CAREFUL. 
+
+If you have ANY questions or problems, first try asking a Caretaker. If
+one is not available, ask one of the Dungeonmasters.  If you are unable 
+to talk to them online, you can always leave them mail with your questions.  
+Just go to one of the post offices located around the city. 
+
+-----------------------------------------------------------------------------
+ -Styx

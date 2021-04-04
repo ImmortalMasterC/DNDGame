@@ -1,0 +1,65 @@
+/* Exit flags */
+XSECRT          1       Secret 
+XINVIS          2       Invisible 
+XLOCKD          3       Locked 
+XCLOSD          4       Closed 
+XLOCKS          5       Lockable 
+XCLOSS          6       Closable 
+XUNPCK          7       Un-pickable lock 
+XNAKED          8       Naked exit 
+XCLIMB          9       Climbing gear required to go up 
+XREPEL          10      Climbing gear required to repel 
+XDCLIM          11      Very difficult climb 
+XFLYSP          12      Must fly to go that way 
+XFEMAL          13      Female only exit 
+XMALES          14      Male only exit 
+XPLDGK          15      Pledge player exit only 
+XKNGDM          16      Exit for kingdom 0/1    0=Ragner  1=Rutger
+XNGHTO          17      Only open at night 
+XDAYON          18      Only open during day 
+XPGUAR          19      Passive guarded exit 
+XNOSEE          20      Cannot use / see exit 
+XPLSEL          21      Class selective exit
+XPASSN          22        Assassin
+XPBARB          23        Barbarian
+XPCLER          24        Cleric
+XPFGHT          25        Fighter
+XPMAGE          26        Mage
+XPPALA          27        Paladin
+XPRNGR          28        Ranger
+XPTHEF          29        Thief
+XPBARD          30        Bard
+XPMONK          31        Monk
+XPDRUD          32        Druid
+XPALCH          33        Alchemist
+                34        Reserved
+                35        Reserved
+                36        Reserved
+                37        Reserved
+XSMALL          38      Small race only
+XLARGE          39      Large race only
+XNOBIG          40      No large race 
+XRACES          41      Race selective exit
+XPSDWF          42        Dwarf
+XPSELF          43        Elf
+XPSHEF          44        Half elf
+XPSHOB          45        Hobbit
+XPSHUM          46        Human
+XPSORC          47        Orc
+XPSHGT          48        Half giant
+XPSGNM          49        Gnome
+XPSSAT          50        Satyr
+XPSHOC          51        Half orc
+XPSOGR          52        Ogre
+XPSDEF          53        Dark elf
+XPSCNT          54        Centaur
+                55        Reserved
+                56        Reserved
+                57        Reserved
+XMOUSE          58      Mouse-sized exit
+XNOEVL          59      Evil player cannot exit
+XNGOOD          60      Good player cannot exit
+XNPRNT          61      Exit name does not print
+XTPRNT          62      Exit temporarily open
+XMONEY          63      Can be opened by bribed or paid monster
+XNOINV          64      Invisible player cannot use

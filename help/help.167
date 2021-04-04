@@ -1,0 +1,12 @@
+help.167
+
+	*exp <player>
+
+	This command reports how many experience points a player has. 
+It also gives the amount of points still needed till the next level.
+
+example:
+
+:*exp jocko
+Jocko has 1540 experience points.
+508 still needed. 

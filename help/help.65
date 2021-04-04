@@ -1,0 +1,13 @@
+	PRAY
+
+Pray is a skill given to clerics, paladins and monks.  When the prayers
+of clerics and paladins are heard by Alith, they are given additional piety. 
+The player will have extra piety for about five minutes or so allowing the
+the player to heal faster.  He will also be attacked less by monsters during 
+that time.
+When monks pray, their prayers are heard by either Alith or Zeth, depending
+on the player's alignment.  Evil prayers are heard by Zeth.  In either case,
+a monk's hands are sanctified for a short time which allows him to attack
+and kill a monster that otherwise could only be killed by an enchanted
+weapon.
+

@@ -1,0 +1,7 @@
+	LOCK <exit/door> [#] [with] <key-name> [#]
+
+If you have the key that unlocks a door, the same key can be used to 
+lock the door.   If you have four different keys in your inventory,
+and key number three is for the vault, be sure to specify the number.
+
+:lock vault key 3   

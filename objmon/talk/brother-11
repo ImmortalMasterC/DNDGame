@@ -1,0 +1,30 @@
+train
+For which level do you seek?
+seven
+Have you retrieved the silver cross?
+cross
+It was stolen by one of the Grimley brothers.  Take it back from them.
+grimley
+The brothers are often found in a pub somewhere in Stonehaven.
+stonehaven
+Stonehaven is the eastern township of Darbonne.
+pub ACTION grumble
+It is located in Stonehaven.  Listen next time.
+nine
+Have you returned with some steam staves?
+stave
+It's a magical staff that produces heat by means of steam.  There is a place in the sewers where some can be found.
+sewers
+The entrance is locked.  You will need to obtain a key, or perhaps you have a friend who is a thief.  Thieves are very good at picking locks, you know.
+eight
+I hope you haven't forgotten about the candles.
+candles ACTION sigh
+Go back to Suntunik's shop.
+suntunik
+She has a candle shop in the village of Dunblane.  Inquire about our order.  Please be quick.
+dunblane
+'Tis north of Lindon.  Go quickly.
+ten
+Go back downstairs and speak with the abbott.
+certificate
+Take it back to the brother upstairs.  He will trade for it.

@@ -1,0 +1,44 @@
+information ACTION cackle
+I see and hear many things, and at times I even have the ear of the council.  Exactly what information do you seek? Perhaps you would like to know of the training locations?  Or the location of a pawn shoppe?
+gossip ACTION cackle
+I see and hear many things, and at times I even have the ear of the council.  Exactly what information do you seek? Perhaps you would like to know of the training locations?  Or the location of a pawn shoppe?
+info ACTION cackle
+I see and hear many things, and at times I even have the ear of the council.  Exactly what information do you seek? Perhaps you would like to know of the training locations?  Or the location of a pawn shoppe?
+training ACTION bow
+I can help you, but do you have a gold piece for an old lady?  Tell me for which class you seek knowledge, and perhaps I can direct you to a training location..
+train ACTION bow
+I can help you, but do you have a gold piece for an old lady?  Tell me for which class you seek knowledge, and perhaps I can direct you to a training location..
+level ACTION bow
+I can help you, but do you have a gold piece for an old lady?  Tell me for which class you seek knowledge, and perhaps I can direct you to a training location..
+assassin
+Ooohhh...  one of those, are ya?  Well, if you find Cold Alley near Goldberry Circle, in Quickhand, you should be able to ask where the Assassin's Guild can be found.
+foreman
+Aye, the rascals.  Always with a job list and their hands out.  But if ya need one, go to Cold Alley down in Quickhand.
+barbarian
+Can ye understand what I am telling ye, ya blasted heathen?  Well, if you can, then listen close, for this isn't for everyone.  If you want to train, I hear that King Ethelred has a camp just for that purpose.  You will have to find Truxton Road, which is over on the northeast side of Quickhand, and follow it east into the hills.  You should come to a place where you can follow a trail north.  I think you will find his training camp up there.  Good luck to ya!
+cleric
+Do ya serve mighty Alith?  Can ya find the chapel over yonder west of the park?
+fighter
+Aye, and ye look like a fighter, too.  It's been a long time since this ol' lady had a roll in the hay with the likes of you.  If ya seek level one or two training, then go to the south side of Valar Circle near Goldberry Street.  You can find Maxmilian's place down there.  Tell him hello for me.  But if you want to find Jerome's School for Fighters, then ya must go all the way south in Quickhand, till ya get to the southern-most street.  I think it's called Wall Road South.  Meself, I don't like Jerome very much.
+mage
+hmmph.  Zeth take ye, if ya do any of that magic stooff around here.  But if you are lookin' for the place to train, I think it's over on Nienna Street near the University.  And don'tcha wave that wand around me!
+paladin ACTION bow
+A mighty arm of Alith, that's what ye be!  Keep your gold, mighty arm.  If you are asking about the training location, why that's easy.  Go to the north until you leave the park, then go east to Ormal where you will turn north again.  When you reach Gondolin Street, turn west until you find the gate to the parade grounds on the north side of the castle.  You will be looking for the chapel inside the gate.  Zeth bless ye, mighty arm.
+ranger
+Ahhh... versed in the lore of the woods, are ye?  Well, if you are seeking the training place you will have to go to Puzzle Park in Eldenmar and talk to one of them bugbears there.  He will tell you the code to enter the training hut.
+thief ACTION cackle
+Long ago I was once a member of that guild.  I think Danny the Barber who lives in an alley in Quickhand might be able to help.  Why don'tcha go and see him?
+bard ACTION wink
+Hmmm...  a bard are ye?  well, sing me a song or tell me a story.  And ye can keep your gold.  If you are lookin' for the place young bards go to train, go to that snooty Eldenmar Township, and find Eldar Lane.  You'll see it, or more likely, you'll hear 'em!
+monk
+Do not touch me, and I will tell you.  No need to pay me, either.  I don't want your gold.  No, please don't touch me and I will tell you where to find the training place for your kind.  Go to Oceancrest Boulevard, and south of Gondolin Street you will be at the bottom of a tall ridge that is part of the Bluehorse hills.  There you will find a path that climbs the face of the cliff, and although I've heard that mountain climbing gear is often necessary to go up, you might not have any trouble righ now.  Above is your training site.  Alith bless ya, and me too!
+druids
+Me mother was a druid before she left the order, may Alith bless her.  Them druids always treat me kindly.  If ya are seeking the order, try the Arbor Temple north of Lindon Avenue.  You'll fint it's west of Oceancrest Boulevard.  Druids are such nice folks.  Ya might want to take along some o' me flowers, too.
+druid
+Me mother was a druid before she left the order, may Alith bless her.  Them druids always treat me kindly.  If ya are seeking the order, try the Arbor Temple north of Lindon Avenue.  You'll fint it's west of Oceancrest Boulevard.  Druids are such nice folks.  Ya might want to take along some o' me flowers, too.
+alchemist
+I've heard of your kind.  Can ye really turn base metal to gold?  If you give me some gold, will it turn back to lead?  If so, keep your gold.  I don't need to be fooled.  But since you ask, I've heard that Florence and Hilda, the sisters who own a small apothecary shop in Quickhand, are willing to teach anyone with a desire to be an alchemist.  The shop they share is at the corner of Shannon Way and Dunedain Road.  You can't miss it if you follow your nose.  They sometimes get a powerful stench from that place.
+pawn
+There are pawn shoppes everywhere, but most of them are in little, out of the way places and some of them are hidden.  You will have to search for them.  A friend of mine runs one in Quickhand.  Go to the north entrance of the park, then circle around on Valar Circle until you are south of the park.  You should be able to find Goldberry street.  If you go south until you are at the fountain, you will find a pawn shoppe in the alley close to there.  You'll have to use your search powers to find it, though.  The entry is hidden.  Another close one is located on Oceancrest Boulevard.
+oceancrest
+The pawn shop?  Ah, you mean Trezzle's old place.  He's a skinflint, but you can sell him your junk.  His place is on Oceancrest Boulevard, just south of Skye Lane.  You really can't miss it.  His brother is a warden, so the patrol never bothers him and his shop is where anybody can go in.

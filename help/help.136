@@ -1,0 +1,23 @@
+help.136
+
+	*NOTEPAD [d|a]
+
+	This allows you to read, append, and delete the DM notepad.  With no 
+flag, it will print out the notepad.  The d flag clears the notepad, and
+the a flag allows appending to the notepad.  A single period (.) on a line 
+by itself will terminate the appending of text.
+
+example:
+:*notepad
+            === DM Notepad ===
+
+Green Slime needs to be added to rm903
+
+:*notepad a
+DM notepad:
+->fixed exit north in rm402
+->.
+Message appended.
+
+:*notepad d
+Clearing DM notepad

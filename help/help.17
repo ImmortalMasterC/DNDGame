@@ -1,0 +1,10 @@
+	SEND  <player> <message>
+	TELL  <player> <message>
+	FLASH <player> <message>
+
+Send can be used to telepathically communicate with another 
+player in the game.
+
+: send jack hi how are you?
+Message sent to Jack.
+

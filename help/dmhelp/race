@@ -1,0 +1,16 @@
+CHARACTER RACES
+Flag     Race
+ 0       Unknown
+ 1       Dwarf
+ 2       Elf
+ 3       Half Elf
+ 4       Hobbit
+ 5       Human
+ 6       Orc
+ 7       Half Giant
+ 8       Gnome
+ 9       Satyr
+10       Half Orc
+11       Ogre
+12       Dark Elf
+13       Centaur

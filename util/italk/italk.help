@@ -1,0 +1,33 @@
+To use italk, there needs to be a file called .ithost with the different
+IP addresses of the places to which you wish to telnet.
+EXAMPLE:
+
+.ithost
+styx 198.188.100.10 2001 .styx .macro
+bombor 128.200.76.51 4040
+fin localhost 3000 .fin .fin.macro
+
+Then, you must have a .file called .styx
+.styx
+
+The contents of .styx would look like this:
+styx
+<password>
+*u
+<any other auto command>
+
+You also need a .file for macros
+.macro
+1 *u f
+2 *pur
+...
+9 *echo Styx has arrived in a burst of fireworks
+
+NOTE:   For some reason, the first time you try to use these macros
+by pressing the number key, they do not work.  Press a second time
+(one time) and they will work thereafter. 
+
+And last, you need to have an alias in your .login file:
+alias	styx	italk styx
+
+

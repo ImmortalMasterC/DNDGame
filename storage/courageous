@@ -1,0 +1,19 @@
+/************************************************************************/
+/*                    		courageous									*/
+/************************************************************************/
+/* Clears the scared list												*/
+
+void courageous(ply_ptr)
+creature       *ply_ptr;
+
+{
+	int **scared_of;
+
+	if(Ply[ply_ptr->fd].extr == NULL) 
+	return;
+	scared_of = &Ply[ply_ptr->fd].extr->scared_of;
+	if(*scared_of) {
+		free(*scared_of);
+		*scared_of = NULL;
+	}
+}

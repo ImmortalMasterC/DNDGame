@@ -1,0 +1,6 @@
+spell.24
+
+resist-magic:   
+This spell provides partial protection from magical attacks.
+
+MP cost: 12 		Syntax: cast resist-magic <target>

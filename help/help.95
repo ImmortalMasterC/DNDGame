@@ -1,0 +1,19 @@
+	JIMMY <container> [#] 
+
+The JIMMY command can only be used by a thief.  It allows a thief to 
+attempt to jimmy open a locked container.
+The container can be either in your inventory or on the floor in the 
+room.  If you have a container in your inventory of the same name as 
+one on the floor, the one in your inventory will be used first.  The 
+chance of success depends on the thief's level, dexterity and luck.
+
+You see a jewelry chest.
+: inv
+You are carrying: a jewelry chest, silver dagger.
+: jimmy chest 
+Snick.  You successfully jimmied the jewelry chest.
+
+In the above example, you have jimmied the jewelry chest in your 
+inventory, not the one on the floor.  If you want to jimmy the one
+on the floor, you must specify jewelry chest 2.
+

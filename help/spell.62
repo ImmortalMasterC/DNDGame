@@ -1,0 +1,16 @@
+spell.62
+
+hex:
+This spell allows the caster to bring bad luck to another player 
+or creature.  A player or creature under a hex spell not only 
+suffers very bad luck, but also has a difficult time hitting an 
+enemy during an attack.
+
+Only an alchemist, bard, druid, mage or monk understands how to 
+cast this particular spell.
+
+The spell fails if the targeted player is holding a lucky charm. 
+Also, the hex spell can be removed by holding a lucky charm after 
+the spell has been cast.
+   
+MP cost: 20      Syntax: cast hex <target>

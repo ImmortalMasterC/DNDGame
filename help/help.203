@@ -1,0 +1,9 @@
+	CLEAR_SCREEN
+	CS
+
+This command is used to clear the screen.  The two letters cs 
+can be used as an abbreviation.  The cleared screen is only 
+temporary as new information will continue to scroll across the 
+display, but if you don't want someone looking over your shoulder, 
+at least you can clear it until the next time you receive 
+information or look at the room.

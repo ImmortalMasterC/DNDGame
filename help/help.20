@@ -1,0 +1,8 @@
+	PARTY
+	GROUP
+
+The party command shows you a list of people who are currently 
+following you.  You may "lose" any one of these people from your 
+group with the LOSE command.  
+Also see these commands:  LOSE, FOLLOW, GTALK
+

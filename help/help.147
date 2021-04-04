@@ -1,0 +1,14 @@
+help.147
+
+	*POSSESS <monster-name>
+
+	This command allows you to assume the identity of the named monster.
+You can speak through the monster, and when you move, the monster mimics
+your actions.  The monster does not take on any of your characteristics.
+It retains its own hitpoints and magicpoints.   The command is a toggle,
+and is also used to release the monster.
+
+
+
+:*possess nobleman
+You possess a nobleman.

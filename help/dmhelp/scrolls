@@ -1,0 +1,77 @@
+  #   Scroll              Spell             Magic    MP's     Realm
+------------------------------------------------------------------------------
+301.  gray                vigor               1        2 
+302.  black               hurt                2        3      Wind
+303.  glowing             light               3        5
+304.  green               cure-poison         4        6
+305.  white               bless               5       10
+306.  blue                protection          6       10
+307.  charred             fireball            7        7      Fire
+308.  purple              invisible           8       15
+309.  none                restore             9		
+310.  violet              detect-invis       10       10
+311.  sparkling           detect-magic       11       10
+312.  shimm white         teleport           12       20
+313.  black-striped       stun               13       10
+314.  electric-blue       lightning          14       15      Wind
+315.  blue-white          ice blade          15       22      Water
+316.  golden              enchant            16       25
+317.  silver              word-of-recall     17       20
+318.  shimm black         summon             18       30 
+319.  blood-soaked        mend-wounds        19        4
+320.  light-green         heal               20       20
+
+  #   Scroll              Spell            Magic     MP's     Realm
+------------------------------------------------------------------------------
+321.  leaf-green          track              21        0	
+322.  tattered            levitation         22       10
+323.  burnt-red           resist-fire        23       12
+324.  weightless          fly                24       15
+325.  sparkling red       resist-magic       25       12
+326.  azure               shockbolt          26       10      Wind
+327.  earthbrown          rumble             27        3      Earth
+328.  ash-white           burn               28        3      Fire 
+329.  blue-white          blister            29        3      Water
+330.  torn indigo         dustgust           30        7      Wind 
+331.  turquoise           waterbolt          31        7      Water
+332.  dirty brown         crush              32        7      Earth		
+333.  dark brown          engulf             33       10      Earth
+334.  flaming red         burstflame         34       10      Fire
+335.  citron              steamblast         35       10      Water
+336.  sepia               shatterstone       36       15      Earth
+337.  cherry-red          immolate           37       15      Fire
+338.  anil-blue           bloodboil          38       15      Water
+
+  #   Scroll           Spell                Magic    MP's     Realm	   
+------------------------------------------------------------------------------
+339.  cobalt-blue         thunderbolt        39       22      Wind
+340.  honey-brown         earthquake         40       22      Earth
+341.  burnt-orange        flamefill          41       22      Fire 
+342.  light-gray          know-alignment     42        6
+343.  goatskin            remove-curse       43       12
+344.  amber               resist-cold        44       12
+345.  lilac               breathe-water      45       12  
+346.  silver-gray         earth-shield       46       12
+347.  onion skin          mind-meld          47       15
+348.  henna               drain-experience   48        0
+349.  mottled green       cure-disease       49       12
+350.  baby blue           cure-blindness     50       12
+351.  lemon yellow        fear               51       15 
+352.  copper              room-vigor         52       12
+353.  silver fleck        transport object   53        8
+354.  dull black          cause blindness    54       15
+355.  papyrus             cause silence      55       12
+356.  green striped       remove silence     56       12
+357.  light tan           fortune            57       12
+358.  rawhide             super-strength     58       15 
+359.  tiny little         shrink             59       15 
+360.  mirror-like         reflect            60       25 
+549.  blood-red           evil-eye           61       20
+550.  ice-covered         freeze             62       30
+568.  striped             hex                63       20
+      none                conjure            64        0
+837.  spider-net          entangle           65       15
+839.  engraved            knock              66       12
+853.  book of absolution  absolve            67       20         
+295.  ancient chart       dispel             68       20
+933.  acid-etched vellum  resist-acid        69       12

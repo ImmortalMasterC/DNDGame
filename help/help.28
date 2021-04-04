@@ -1,0 +1,16 @@
+The following flags may be cleared if you have previously set them:
+	SET <flag>		 CLEAR <flag>
+
+ansi        Color will not be displayed.
+auto        Disable auto attack.
+echo        Disable Communications echo.
+ignore      Enable communications form other players.
+long        Show a room's entire long description.
+nobroad     Show all broadcast messages.
+nologin     Show all login messages.
+nosummon    Allows others to cast summon on your character.
+nocop       Allows others to copulate with you.
+prompt      Disables the display of HP & MP with the prompt.
+split       You will no longer auto-split gold with group followers.
+nofollow    Others are allowed to follow you.
+wimpy       Your character will not automatically flee when HP is low.

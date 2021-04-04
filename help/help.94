@@ -1,0 +1,19 @@
+	FASTEN/UNFASTEN <container> [#] [with] <key name> [#]
+
+The FASTEN or UNFASTEN command allows you to fasten or unfasten a 
+locked container if you have the appropriate key.  The container
+can be either in your inventory or on the floor in the room.  If
+you have a container in your inventory of the same name as one on
+the floor, the one in your inventory will be used first.
+
+
+You see a mahogany chest.
+: inv
+You are carrying: silver key, a steel key, a mahogany chest, a mahogany key.
+: unfasten chest with key 3
+Snick.  You unfasten the mahogany chest.
+
+In the above example, you have unfastened the mahogany chest in your 
+inventory, not the one on the floor.  If you want to unfasten the one
+on the floor, you must specify mahogany chest 2.
+

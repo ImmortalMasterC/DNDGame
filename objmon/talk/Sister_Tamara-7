@@ -1,0 +1,42 @@
+train
+Then you must purchase a training key from me.  What level do you wish to train for?
+two
+Ahh.  A newbie.  You must purchase a brass key from me for $250 in gold.  Only then can you unlock the training room door.
+three
+I have a bronze key you must purchase if you wish to enter the trainig room.  Alith will be pleased.
+four
+Level four, you say?  Then you must purchase the copper key.  It's expensive, but you have taken a vow of poverty.
+five
+An iron key will fit the iron door's lock, where you must go to train.  Although iron is a base metal, you will find it to be important to you later.
+six
+Ordinarily, the price would be two thousand in gold, but since this is your last time to train at this location, I will give it to cheap.  Now you must seek the Shepherd of the Goats.
+seven
+I cannot train you at that level.  You must seek the Shepherd of the Goats in the Bluehills.  Follow the goat trails until you come to the ruined temple.  There is still a training center there.
+purchase
+There is a proper way to ask, little one.  you must say, "purchase <object> Sister."
+buy
+Go to the sales room, please.  We are presently short of armor, but we have a few weapons.
+supplies
+Go to the sales room, please.  We are presently short of armor, but we have a few weapons.
+brass
+The brass door leads to the training room for level two clerics.
+bronze
+Bronze is the door for level three clerics.  Do you wish to purchase a bronze key?
+copper
+Level four clerics will train in the room behind the copper door.
+iron
+Iron is important to the level five cleric, and will be more important later.  Behind the iron door is the training room for level five clerics.
+silver
+If you are eligble to train behind the silver door, then this is your last time to train here.  You must seek the Shepherd of the Goats to train for level seven.
+shepherd
+The Shepherd of the Goats watches over his flock in the Bluehills.  Look for the goat trails leading to the temple.  It is past the monk's monestary.  Now, soldier of Alith, kneel and ask me to bless you.
+bless CAST bless
+There.  The blessing comes not from me, but from Alith himself.  Do you wish protection, as well?  If not, go in peace.
+protection CAST protection
+I do believe my memory is slipping.  Did I already bless you?  Well, go and be a soldier against evil.
+prot CAST protection
+I do believe my memory is slipping.  Did I already bless you?  Well, go and be a soldier against evil.
+blue
+Go to Stonehaven and find Iron Road, then follow it north till you find the goat trails leading into the Bluehills.  High on a bluff you will find the ruined temple where you can train at levels seven through nine.  Find the Shepherd of the Goats.  Now, kneel and ask me to bless and protect you.
+hills
+Go to Stonehaven and find Iron Road, then follow it north till you find the goat trails leading into the Bluehills.  High on a bluff you will find the ruined temple where you can train at levels seven through nine.  Find the Shepherd of the Goats.  Now, kneel and ask me to bless and protect you.

@@ -1,0 +1,13 @@
+Three classes are allowed to teach a limited number of spells if they 
+have already learned the spells themselves.
+
+	Cleric			Druid			Mage
+************************************************************************
+	bless			curepoison		blister
+	know-alignment		remove-disease		burn
+	light			vigor			hurt
+	protection					rumble
+	vigor
+
+Caretakers and Dungeonmasters may teach any spell.
+

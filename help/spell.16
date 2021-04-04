@@ -1,0 +1,9 @@
+spell.16
+
+word-of-recall:   
+This spell recalls its target to the Cloud of Life.
+Word-of-recall may be cast by clerics only.  The cost
+is less when cast one's self.
+
+MP cost:  7      Syntax: cast word 
+MP cost: 10      Syntax: cast word <target>

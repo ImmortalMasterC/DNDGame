@@ -1,0 +1,11 @@
+help.140
+
+	*ACTIVE
+
+	This displays the current active monster list.
+
+example:
+:*active
+Active monster list
+Name:nobleman.
+Name:gonzo.

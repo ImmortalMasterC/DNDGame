@@ -1,0 +1,17 @@
+help.156
+
+	*CREATUREADD   *CRTADD   *CA
+	*CREATURESAVE  *CRTSAVE  *CS
+
+	The first command will create a generic monster which can be 
+formed into a particular monster using the cname, ctalk and *set 
+commands.  The second command is used to save the newly created 
+and modified monster.
+
+example for creation:
+:*crtadd
+A clay form just arrived.
+Creature created.
+
+example for save:
+*crtsave c troglodite

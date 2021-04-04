@@ -1,0 +1,24 @@
+	LOOK 
+	LOOK [<object/creature> [#]]
+	EXAMINE [<object/creature> [#]]
+	LOOK <player>
+
+When typed by itself, LOOK or EXAMINE will show you the description 
+of the room in which you are currently standing.  If you include a 
+second word after the command, such as an object, creature or player, 
+you will look at that.  If there are two or more items at which to 
+look, be sure to specify the number.  If you look at an item in your 
+inventory, the description of the item will be preceded by a plus 
+sign.  If you look at an item you are holding/wielding/wearing, the 
+description will be preceded by an asterisk.  If there is neither a 
+plus sign nor an asterisk, then the item is on the floor.
+
+Suppose you have two bags in your inventory and are also holding a 
+like bag.  If there is the same kind of bag on the floor, there are 
+four bags.  Further, suppose all of the bags are empty except the
+one you are holding.  The order in which you will see them is:  
+	inventory - wield/wear/hold - floor.
+ 
+:look bag 3
+*You see nothing special about it.
+It contains: a book.

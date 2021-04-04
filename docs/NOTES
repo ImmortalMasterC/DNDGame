@@ -1,0 +1,51 @@
+
+This is the command to start the game:  DAR -r &
+
+The latest version of gdb does not work with this code.  Use mdb, a
+renamed older version.  Example:  mdb DAR core
+
+ 
+Compile-time options
+====================
+
+  Define the following in the Makefile before compiling to enable the 
+following options:
+
+
+DMALLOC --  This is for serious debugging, or if you are interested in 
+looking at the memory usage of Mordor.  You also need to install the 
+associated library functions.  See http://www.letters.com/dmalloc for 
+more information.
+ 
+PARANOID -- This will block access to all non-RFC1413 accounts.
+
+CHECKDOUBLE -- This will enable a double log checking routine that used 
+the files in ~/player/simul.  If you want to block double logging using 
+this function you need to create files named after the character you wish 
+to block double logging.  In the file put the other names of the persons 
+characters.
+
+RECORD_ALL -- This will output all the keystrokes by all players to 
+~/log/all_cmd.  Use with caution...  It outputs a lot of data, but is
+useful for debugging a crash.
+
+SECURE -- This will block access to broadcasting for all non-RFC1413 
+accounts that have not been authorized.  It will also prevent them from 
+playing past level 3.
+
+LASTCOMMAND -- This causes WHO to output all players last commands.
+
+SUICIDE -- This keeps track of all suicided characters in ~/log/SUICIDE
+
+COMPRESS -- This enables file compression.  It is on by default and is 
+recommended.
+
+FINGERACCT -- This enables the *finger command for DMs.  You must have 
+~/bin/fing compiled properly from ~/src/finger.c.
+
+AUTOSHUTDOWN -- This enables automatic shutdowns of the program.
+
+GETHOSTBYNAME -- This enables the system call gethostbyname.
+
+Be sure to check out the online FAQ at http://moria.bio.uci.edu if you 
+have any questions.

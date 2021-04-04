@@ -1,0 +1,15 @@
+	RECITE <object> [#] [on] [<player/monster/object> [#]]
+	   USE <object> [#] [on] [<player/monster/object> [#]]
+
+The recite command allows you to USE a scroll, thereby causing the 
+spell contained on the scroll to be cast.  RECITE is different from 
+STUDY in that the spell is actually cast when you recite or use the 
+scroll, but you do not learn the spell.  It is different from CAST 
+because no magic points are required to recite a scroll, and you do 
+not have to know the spell to recite it.
+
+You have: a black scroll.
+: recite scroll to rat
+You cast a hurt spell on the rat for 7 damage.
+The black scroll disintegrates.
+

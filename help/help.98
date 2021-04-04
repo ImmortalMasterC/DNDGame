@@ -1,0 +1,11 @@
+	CLASSEMOTE <message>
+	abbreviate as:  clem
+
+This command broadcasts an emote message appended to the character's 
+name, but only to members of the same class. 
+
+example:  (If your character's name is Swifty and you are a thief.)
+If you type:
+clem  grabs a dragon by the tail!
+Then all thief class players will see:
+(Thief) ### Swifty grabs a dragon by the tail!

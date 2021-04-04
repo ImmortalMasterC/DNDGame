@@ -1,0 +1,13 @@
+	PEEK <player/monster>
+
+Peek allows thieves and assassins to try and "peek" at 
+another player's or monster's inventory.  If they are 
+successful, they get to see what that creature is holding. 
+If they are doubly successful, then no one will see that 
+the thief or assassin tried to peek.
+
+Mark says, "Hi".
+: peek Mark
+He is carrying: a bow, a knife.
+
+Related Commands:  steal, stealgold, distract

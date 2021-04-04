@@ -1,0 +1,8 @@
+spell.20
+
+track:
+This spell immediately teleports the caster to the location of 
+the target player.  This spell can only be used by rangers.  
+It might be dangerous to other classes to attempt to use it.
+
+MP cost: 		Syntax: track <target>

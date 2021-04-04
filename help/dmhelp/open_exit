@@ -1,0 +1,26 @@
+Want to move a rock to reveal a concealed entrance?
+
+Make a small rock and set the permanent flag.  Place it in the room where
+the exit is located.  Suppose this is the room:
+
+Trail's End
+You have reached the end of the trail.  A large rock blocks your way to
+the north.  South of you is a dark jungle.  There's a smaller rock jutting
+from the larger one, and it looks like you could move it.  An inscription
+written in magic letters appears and says, "push me."
+Obvious exits:  south
+You see a small rock.
+
+Make another exit called "hole in the rock", and set the no-print flag.
+This is the second exit.
+
+Now edit the small rock in the editor:
+	Set shots to 0/0
+	Place a zero in the output string:  0
+	Since the "hole in the rock" is the second exit, make the dice plus = 2
+	(note:  dice plus number == exit number)
+	Set Special to 2
+
+You also must set the XNPRNT flag and the XNOSEE flag.  XNPRNT means the
+exit does not print, but could be used anyway.  To keep it from being usable,
+set the no-see flag as well.

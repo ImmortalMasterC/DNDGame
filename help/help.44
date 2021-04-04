@@ -1,0 +1,11 @@
+	VALUE <object> [#]
+	 COST <object> [#]
+
+The VALUE command only works in pawn shoppes, and is used to ask the 
+shopkeeper how much money he will pay you for a particular item.  
+However, be aware that your luck changes throughout the game, and 
+luck can be a factor in how much you receive for an item you sell. 
+
+Use the COST command n a repair shopt to find out how much the repair 
+smith will charge you to fix either a piece of armor or a weapon.
+

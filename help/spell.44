@@ -1,0 +1,6 @@
+spell.44
+
+breathe-water:   
+This spell allows its target to breathe under water.
+
+MP cost: 12 		Syntax: cast breathe-water <target>

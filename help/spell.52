@@ -1,0 +1,7 @@
+spell.52
+
+transport-object:
+This spell allows a mage to send an object to another player by
+means of mental power alone.
+
+MP cost: 3		 Syntax: cast transport <object> <target>

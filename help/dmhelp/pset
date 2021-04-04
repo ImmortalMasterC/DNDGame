@@ -1,0 +1,29 @@
+	*set c <name> <a|ar|con|c|dex|dn|ds|dp|e|f|g|hm|h|int|l|luc|mm|m|
+                   pie|p#|r#|sp|sp|str|q> [<val>]
+
+	a		alignment
+	ar		armor class	
+	con		constitution
+	c		class   ------------------- 1  Assassin
+	dex		dexterity                   2  Barbarian
+	dn		number of dice              3  Cleric
+	ds		number of dice sides        4  Fighter 
+	dp		plus on dice                5  Mage 
+	e		experience                  6  Paladin
+	f#		flag toggle                 7  Ranger
+	g		gold                        8  Thief
+	h		current HP                  9  Bard
+	hm		maximum HP                 10  Monk
+	i		intelligence               11  Druid
+	l		level                      12  Alchemist
+	luc		luck	                   13  Caretaker
+	m		current MP                 14  DungeonMaster
+	mm		maximum MP
+	p#		proficiency
+	pie		piety
+	r		race
+	r#		realm
+	sp		spells toggle
+	str		strength
+	q		quests toggle
+

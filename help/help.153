@@ -1,0 +1,24 @@
+help.153
+
+	*spells <player>
+
+This command allows a DM or caretaker to list the spells known 
+by any player who is logged in.  
+NOTE:  There is a *set command to cause the player to either learn
+or forget a particular spell.  The command is a toggle, and the
+player either learns or forgets the spell each time the flag is set.
+(See the help command for more information on *set commands.)
+
+examples:
+:*spells casper
+3 spells known by Casper:
+Bless, fly, light
+:
+:*set c casper spe light
+Casper forgets light.
+:
+:*set c casper spe heal
+Casper learns heal.
+ 
+NOTE:  Be sure to use the abbreviation spe.
+

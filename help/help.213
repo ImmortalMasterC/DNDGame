@@ -1,0 +1,5 @@
+	SHOW <object> [#] <player>
+
+This command allows you to show something in your inventory, or an
+item you may be either holding or wielding, to another player.  The
+other player is shown a complete description of the object.

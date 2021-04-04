@@ -1,0 +1,17 @@
+
+The following flags may be set or cleared:
+	SET <flag>		 CLEAR <flag>
+
+auto        Enable auto attack.
+echo        Communications echo enabled.
+home        Makes the current room a 'teleport home' room.
+ignore      Ignore all communications from other players.
+nobroad     Disable all broadcast messages sent to you.
+nologin     Disable all login messages sent to you.
+nosummon    Disables ability of others to cast summon on your character.
+nocop       Others cannot copulate with you.
+prompt      Enables the display of HP & MP with the prompt.
+split       You will auto-split any gold with your group followers.
+nofollow    Others cannot follow you.
+wimpy       Your character will automatically flee when HP is low.
+            (You can also set the HP level:  set wimpy <value>)

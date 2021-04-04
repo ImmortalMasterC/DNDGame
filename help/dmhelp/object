@@ -1,0 +1,17 @@
+OBJECTS
+Flag    Type
+ 0      Sharp
+ 1      Thrust
+ 2      Blunt
+ 3      Pole
+ 4      Missile
+ 5      Armor
+ 6      Potion
+ 7      Scroll
+ 8      Wand
+ 9      Container
+10      Money
+11      Key
+12      Light
+13      Misc  
+
